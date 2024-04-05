@@ -19,6 +19,9 @@ header img{
     width: 50px;
     margin: 15px;
 }
+html{
+    width: 100%; height: 100%;
+}
 main{
     display: flex;
     flex-direction: row;
@@ -29,24 +32,26 @@ main{
 .navigation_area{
     display: flex;
     flex-direction: column;
+    position: fixed;
 }
 .wish_list{
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
-    /*position: fixed; 얘를 fixed로 바꿨다 하면 main 안의 nav와 img 영역이 row로 레이아웃 구성이 안됩니다.. 자꾸 영역을 침범해요 왜그럴까요 ㅜㅜ*/
     width: 180px; height: 210px;
     border: 1px solid black; border-radius: 10px;
-    margin: 50vh 50px;
+    margin: 50% 50px;
 }
 .wish_list h2{
     font-family: 'Pretendard-Regular';font-weight: bold; text-align: center; font-size: large;
     margin-top: 20px;
 }
 .wish_list ul{
-    position: fixed;
+    position: absolute;
     justify-content: center;
-    align-content: center;
+    align-items: center;
+    margin-top: 60px;
     border-radius: 10px;
     font-family: 'Pretendard-Regular'; font-weight: 200;line-height: 1.5; text-align: center;font-size: large;
     list-style-type: none;
@@ -56,6 +61,7 @@ main{
     text-decoration: none;
     color: black;
 }
+
 .wish_list ul li a{
     text-decoration: none;
     color: black;
@@ -78,18 +84,39 @@ main{
     flex-direction: column;
     /*justify-content: space-between;*/
     align-items: stretch;
-    width: 100%;
-    margin-left: 30px; margin-right: 60px;
+    width: 70%; /*width 값을 지정하는게 너머넘너머 어려웠는데, 그냥 눈대중으로 70%면 되겠다~ 해서 하는게 맞는건지,, ㅋ ㅋ화면에 넘치지 않고 꽉 차는 값을 어케 지정할까요..*/
+    padding-right: 50px;
+    margin-left: 300px; /*메인 안에 flex - row로 section을 두개로 레이아웃을 잡으려고 했는데, nav section을 fixed로 주니 메인 섹션이 자꾸만 침범해서 왼쪽 마진을 줘버렸습니다.. 왜 침범하는 것일까요..*/
 }
 /*움직이는 배너 이미지*/
-
-/*사실 요 움직이는 친구들은 이해를 못했습니다..*/
+.banner{
+    overflow: hidden;
+    margin: 10px 20px; /*반응형으로 했을 때 마진값이 왜 자꾸 감소하는지 궁금하다*/
+}
+.slide_image{
+    display: flex;
+    flex-direction: row;
+    margin: 20px 10px;
+    width: 100%;
+    animation: roll 10s linear infinite;
+}
+@keyframes roll{
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(-100%);
+    }
+}
 .slide{
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: flex-start;
 }
+/*얘네들이 header 영역을 침범함 진심 왤까*/
+
+
 /*위시품목들*/
 article{
     display: flex;
@@ -139,7 +166,7 @@ span{
 }
 span:hover{
     animation: span 2.5s infinite;
-    transition: ease;
+    transition: ease; /*hover 했을 때 얘네들이 header 영역을 침범함*/
 }
 @keyframes span{
     0% {transform: scale(1);}
@@ -186,8 +213,7 @@ span p3{
 footer{
     box-sizing: border-box;
     background-color: rgb(255, 195, 83);
-    display: flex;
-    flex-direction: column;
+    display: block;
     font-family: 'Pretendard-Regular';
     font-weight: 100;
     text-align: center; 

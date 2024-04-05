@@ -10,6 +10,7 @@
             margin: 0;
             display: flex;
             flex-direction: column;
+            height: 100%;
         }
         header{
             background-color: black;
@@ -31,10 +32,9 @@
 <!--해결하지 못한 것/질문
 1. nav
     1-1. body > main > nav section과 main section을 felx - row 로 레이아웃을 구성하였는데,
-    nav영역을 fixed로 두려고 하면 옆의 main section이 자꾸 침범함.
-    1-2. (위 문제의 연장선상) 우선 nav section 안의 <nav>에만 fixed를 걸어둔 상태인데, 화면을 옆으로 스크롤할 시 여전히 타 영역 침범.
-    1-3. 클릭 시 페이지 내 scroll > 더 정확한 위치로 이동하고 싶음
-    1-4. hover시, list 안의 a 위에 호버시켜야만 텍스트 색이 변하는 문제점.
+    nav영역을 fixed로 두려고 하면 옆의 main section이 자꾸 침범함. (우선 그냥 왼쪽 section width만큼 마진을 걸어버렸음)
+    1-2. 클릭 시 페이지 내 scroll > 더 정확한 위치로 이동하고 싶음
+    1-3. hover시, list 안의 a 위에 호버시켜야만 텍스트 색이 변하는 문제점.
 2. main section > width값 설정
     2-1. width 값을 어떻게 설정해야 될지 모르겠음. 현재는 body > main > main section의 width 값이 컨텐츠 최대값임 ㅠㅠ
     2-2. hover했을 때 header위로 침범하는 이유가 뭘까요 ㅜㅜ?
@@ -418,7 +418,7 @@
         <h2>credit</h2>
         <li>html 끄적인 사람 : 지민</li>
         <li>css 만진 사람 : 지민</li>
-        <li>화내지않고 답답해하지 않고 질문 받아준 웨비들 : 유태승, 이동헌</li>
+        <li>화내지않고 답답해하지 않고 질문 받아준 웨비들 : 유태승, 이동헌, 김가현 (iOS)</li>
         <li>불철주야 함께 해준 파짱님: 이재훈</li>
     </footer>
 </body>
