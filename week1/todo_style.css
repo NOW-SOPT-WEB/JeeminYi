@@ -12,45 +12,60 @@
 }
 
 html{
-    width: 100%; height: 100%;
+    width: 100%;
+    height: 100%;
 }
 body{
-    background : linear-gradient(45deg,rgb(196, 225, 255),rgb(255, 245, 177));
+    display: flex;
+    flex-direction: column;
     width: 100%; height: 100%;
+    background : linear-gradient(45deg,rgb(196, 225, 255),rgb(255, 245, 177));
     margin: 0;
 }
 header{
     display: flex;
     flex-direction: column;
-    margin-top: 100px; margin-bottom: 50px;
-    text-align: center; font-family: 'Her-Gilwonok';
+    margin-top: 100px;
+    margin-bottom: 50px;
+    text-align: center;
+    font-family: 'Her-Gilwonok';
     width: 100%;
 }
-span{
+
+
+
+.upper-area{
     display: flex;
     flex-direction: row;
     justify-content: center;
 }
+
 input[type="text"]{
     width: 250px; height: 40px;
     padding-left: 13px;
-    font-family: 'Pretendard-Regular'; font-size: medium;
-    border-radius: 9px; border: 1px solid rgb(255, 192, 57);
+    font-family: 'Pretendard-Regular';
+    font-size: medium;
+    border-radius: 9px;
+    border: 1px solid rgb(255, 192, 57);
     box-sizing: border-box;
     align-self: center;
 }
-input[type="button"]{
+button{
     width: 45px; height: 40px;
     text-align: center;
+    cursor: pointer;
     align-self: center;
-    font-family: 'Pretendard-Regular'; font-size: medium; font: bold;
-    border-radius: 9px; border: 1px solid rgb(255, 192, 57);
+    border: none;
+    outline: none;
+    font-family: 'Pretendard-Regular';
+    font-size: medium; font: bold;
+    border-radius: 9px;
+    border: 1px solid rgb(255, 192, 57);
     background-color: rgb(255, 192, 57);
     margin: 0 10px;
     box-sizing: border-box;
 }
-
-span div:active{
+button:active{
     animation: div 3s;
     transition: ease-in-out;
 }
@@ -70,14 +85,14 @@ main{
     align-items: center;
     width: 100%;
 }
-main section{
-    width: 100%;
-}
 h2{
     font-family: 'Her-Gilwonok';
     text-align: center;
 }
-article{
+section{
+    width: 100%;
+}
+div{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -85,22 +100,23 @@ article{
     width: 100%;
     margin: 10px 0;
 }
-article div{
+article{
     display: flex;
     flex-direction: row;
-    width: 250px; height: 50px;
+    width: 15rem; height: 3rem;
     border-radius: 10px;
     background-color: white;
-    color: black;font-family: 'Pretendard-Regular'; text-align: left; padding-left: 20px; font-size: large;
+    color: black;font-family: 'Pretendard-Regular';
+    text-align: left;
+    padding-left: 20px;
+    font-size: large;
     justify-content: stretch;
     margin: 5px 0;
-}
-article div{
     transform: translateY(-10%);
     animation: floater 1.5s infinite;
     transition: ease 0.5s;
 }
-article div p{
+p{
     justify-content: flex-start;
     margin: 2px 0;
     align-self: center;
@@ -110,9 +126,11 @@ article div p{
     text-overflow : ellipsis;
 }
 img{
+    float: right;
     justify-content: flex-end;
     align-self: center;
     margin-right: 20px;
+    width: 10px;
 }
 .not_started{
     margin-left: 150px;
