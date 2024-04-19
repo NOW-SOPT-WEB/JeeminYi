@@ -7,7 +7,6 @@ homeBtn.addEventListener("click", function() {
     window.location.href = homePageUrl;
 });
 
-
 //2번 nav filter
 document.addEventListener("DOMContentLoaded", function() {
 
@@ -99,10 +98,10 @@ document.addEventListener("DOMContentLoaded", function() {
 
     function addListToCart() {
         const confirmedItem = localStorage.getItem('item');
-        if (confirmedItem) { //일단 로컬스토리지 값 가져오기 > 정보 불러오기 > 행 생성하기 > 셀마다 들어갈 값 정의 > 셀에 값 할당 > 함수 호출
-            //정보 파싱
+        if (confirmedItem) { 
+
             const parseInfomation = JSON.parse(confirmedItem);
-            //행 생성
+
             const addNewRow = document.createElement('tr');
 
             const addItemCheckbox = document.createElement('td');
@@ -139,4 +138,12 @@ document.addEventListener("DOMContentLoaded", function() {
     }
     console.log(tbody);
     addListToCart();
+});
+
+const cartToHomeBtn = document.querySelector(".go-to-home-button");
+
+cartToHomeBtn.addEventListener("click", function() {
+    const TohomePageUrl = "index.html"
+
+    window.location.href = TohomePageUrl;
 });
