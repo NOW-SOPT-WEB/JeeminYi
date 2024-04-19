@@ -1,0 +1,138 @@
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+*{
+    font-family: 'Pretendard-Regular';
+    box-sizing: border-box;
+}
+html{
+    width: 100%; height: 100%;
+}
+body{
+    width: 100%; height: 100%;
+    margin: 0;
+}
+.header{
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: black;
+    font-size: small;
+    width: 100%; height: 4rem;
+    margin: 0;
+    color: white;
+    z-index: 1;
+    top: 0;
+}
+.header img{
+    width: 4rem;
+    padding: 0 3px;
+}
+.sidebar{
+    width: 15rem;
+    background-color: rgb(244, 244, 244);
+    top: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 5;
+    position: fixed;
+    transition: all 0.3s ease;
+    ul{
+        padding-left: 1.5rem;
+        padding-top: 1rem;
+    }
+    li{
+        list-style: none;
+        font-size: large;
+        font-weight: 900;
+        line-height: 2rem;
+        cursor: pointer;
+    }
+    li:hover{
+        animation: bounce 2.5s infinite;
+        transition: ease;
+    }
+    .material-symbols-outlined{
+        cursor: pointer;
+    }
+}
+.sidebar {
+    display: none;
+}
+.sidebar.active {
+    display: block;
+}
+section{
+    width: 100%; height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    margin-top: 4rem;
+    justify-content: center;
+    align-items: center;
+    button{
+        all: unset;
+        font-family: 'Pretendard-Regular';
+        border-radius: 9px;
+        text-align: center;
+        padding: 0.5rem;
+        color: white;
+        margin: 5rem 1rem;
+        cursor: pointer;
+    }
+    .buy-button{
+        background-color: rgb(234, 131, 164);
+    }
+    .go-to-home-button{
+        background-color: black;
+    }
+}
+.cart_area{
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+.cart_table{
+    width: 150rem;
+    margin: 0 auto;
+    text-align: center;
+    border-collapse: collapse;
+}
+table {
+    border-collapse: collapse;
+    border: 2px solid black;
+    border-radius: 1rem;
+}
+
+th, td {
+    border: 2px solid black; 
+    padding: 8px; 
+}
+th{
+    background-color: rgb(223, 223, 223);
+    color: rgb(0, 0, 0);
+    border-color: black;
+    height: 2rem;
+}
+td{
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    img{
+        width: 8rem;
+    }
+    button{
+        justify-content: center;
+        align-items: center;
+        align-self: center;
+    }
+}
+
+
+
+@import url(./reset.css);
