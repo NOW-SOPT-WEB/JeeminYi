@@ -81,7 +81,10 @@ document.addEventListener("DOMContentLoaded", function(){
                     image : imageSrc,
                     categoryName : itemCategory,
                 };
-                localStorage.setItem('item',JSON.stringify(listItemInfo));
+            
+                const cartItem = JSON.parse(localStorage.getItem('item')) || [];  // [] 기존배열
+                cartItem.push(listItemInfo); // 기존배열 + 새아이템 => [] 
+                localStorage.setItem('item',JSON.stringify(cartItem));
                 alert('장바구니 담기 완료!');
 
                 window.location.href = 'cart.html';
@@ -97,11 +100,9 @@ document.addEventListener("DOMContentLoaded", function() {
     const tbody = document.querySelector("#cart-table tbody");
 
     function addListToCart() {
-        const confirmedItem = localStorage.getItem('item');
-        if (confirmedItem) { 
-
-            const parseInfomation = JSON.parse(confirmedItem);
-
+        const confirmedItems = JSON.parse(localStorage.getItem('item')); // []
+        confirmedItems.forEach(confirmedItem =>
+        {
             const addNewRow = document.createElement('tr');
 
             const addItemCheckbox = document.createElement('td');
@@ -112,17 +113,17 @@ document.addEventListener("DOMContentLoaded", function() {
 
             const addItemImg = document.createElement('td');
             const itemImgSrc = document.createElement('img');
-            itemImgSrc.src = parseInfomation.image;
+            itemImgSrc.src = confirmedItem.image;
             addItemImg.appendChild(itemImgSrc);
 
             const addItemName = document.createElement('td');
-            addItemName.textContent = parseInfomation.name;
+            addItemName.textContent = confirmedItem.name;
 
             const addItemPrice = document.createElement('td');
-            addItemPrice.textContent = parseInfomation.price;
+            addItemPrice.textContent = confirmedItem.price;
 
             const addItemCategory = document.createElement('td');
-            addItemCategory.textContent = parseInfomation.categoryName;
+            addItemCategory.textContent = confirmedItem.categoryName;
 
             const addItemBuyBtn = document.createElement('tb');
             const BuyBtn = document.createElement('input');
@@ -133,8 +134,8 @@ document.addEventListener("DOMContentLoaded", function() {
             addNewRow.append(addItemCheckbox, addItemImg, addItemName, addItemPrice, addItemCategory, addItemBuyBtn);
 
             tbody.appendChild(addNewRow);
-            console.log(parseInfomation);
-        }
+            console.log(confirmedItem);
+        })
     }
     console.log(tbody);
     addListToCart();
