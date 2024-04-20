@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이지민 위시리스트</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="logo\8ball.png">
+    <style>
+        body{
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+        header{
+            background-color: black;
+            height: 70px;
+        }
+        main{
+            background-color: white;
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+        }
+        footer{
+            background-color: rgb(221, 234, 255);
+            height: 200px;
+        }
+    </style>
+</head>
+
+<!--해결하지 못한 것/질문
+1. nav
+    1-1. 클릭 시 페이지 내 scroll > 더 정확한 위치로 이동하고 싶음
+3. 반응형
+    3-1. 웹 크기를 줄일 때 flex wrap은 설정해두었지만, 1-2개 남았을 때 커지는 건 어떻게 해야할지 모르겠음 ㅜㅜ
+4. 움직이는 배너 : 마지막 > 첫번째 이미지로 무한 롤링을 해야 하는데 실패함
+-->
+
+<body>
+    <header>
+        <img alt="logo" src="logo\8ball.png">
+        <h2>지민이의 위시리스트</h2>
+        <img alt="menu bar" src="logo\menu.png">
+    </header>
+    <main>
+        <section class="navigation_area">
+            <nav class="wish_list">
+                <h2>위시 목록</h2>
+                <ul>
+                    <li><a href="#main_section">전체</a></li>
+                    <li><a href="#section_1">멋있는거</a></li>
+                    <li><a href="#section_2">귀여운거</a></li>
+                    <li><a href="#section_3">쓸데없는거</a></li>
+                </ul>
+            </nav>
+        </section>
+        <section class="img_area">
+            <article class="banner">
+                <div class="slide">
+                    <div class="slide_image">
+                        <img src="cool\cool1.png" width="100px">
+                    </div>
+                    <div class="slide_image">
+                        <img src="cool\cool2.png" width="100px">
+                    </div>
+                    <div class="slide_image">
+                        <img src="cool\cool3.png" width="80px">
+                    </div>
+                    <div class="slide_image">
+                        <img src="cool\cool4.png" width="100px">
+                    </div>
+                    <div class="slide_image">
+                        <img src="cool\cool5.png" width="100px">
+                    </div>
+                    <div class="slide_image">
+                        <img src="cool\cool6.png" width="100px">
+                    </div>
+                    <div class="slide_image">
+                        <img src="cool\cool7.png" width="100px">
+                    </div>
+                    <div class="slide_image">
+                        <img src="cute\cute1.png" width="100px">
+                    </div>
+                    <div class="slide_image">
+                        <img src="cute\cute2.png" width="100px">
+                    </div>
+                    <div class="slide_image">
+                        <img src="cute\cute3.png" width="100px">
+                    </div>
+                    <div class="slide_image">
+                        <img src="cute\cute4.png" width="100px">
+                    </div>
+                    <div class="slide_image">
+                        <img src="cute\cute5.png" width="100px">
+                    </div>
+                    <div class="slide_image">
+                        <img src="cute\cute6.png" width="100px">
+                    </div>
+                    <div class="slide_image">
+                        <img src="cute\cute7.png" width="100px">
+                    </div>
+                    <div class="slide_image">
+                        <img src="trash\trash1.png" width="100px">
+                    </div>
+                    <div class="slide_image">
+                        <img src="trash\trash2.png" width="100px">
+                    </div>
+                    <div class="slide_image">
+                        <img src="trash\trash3.png" width="100px">
+                    </div>
+                    <div class="slide_image">
+                        <img src="trash\trash4.png" width="100px">
+                    </div>
+                </div>
+            </article>
+            <article class="main_section" id="main_section">
+                <h3>전체</h3> <!--정확히 요기로 이동하게 하고 싶은데, 요럴 땐 어케 해야 할까요??아니면 이동했는데 header가 가리고 있는건가..-->
+                <div class="all">
+                    <span>
+                        <div class="cool_image">
+                            <img src="cool\cool1.png" width="150px">
+                        </div>
+                        <p1>♥</p1>
+                        <p2>캐멋진 살로몬</p2>
+                        <p3>234,000원</p3>
+                    </span>
+                    <span>
+                        <div class="cool_image">
+                            <img src="cool\cool2.png" width="150px">
+                        </div>
+                        <p1>♥</p1>
+                        <p2>짱멋진 눕시</p2>
+                        <p3>345,938원</p3>
+                    </span>
+                    <span>
+                        <div class="cool_image">
+                            <img src="cool\cool3.png" width="115px">
+                        </div>
+                        <p1>♥</p1>
+                        <p2>사고싶어 맥스</p2>
+                        <p3>768,049원</p3>
+                    </span>
+                    <span>
+                        <div class="cool_image">
+                            <img src="cool\cool4.png" width="150px">
+                        </div>
+                        <p1>♥</p1>
+                        <p2>사주세요 칼하트</p2>
+                        <p3>78,000원</p3>
+                    </span>
+                    <span>
+                        <div class="cool_image">
+                            <img src="cool\cool5.png" width="150px">
+                        </div>
+                        <p1>♥</p1>
+                        <p2>내게와 lp</p2>
+                        <p3>188,000원</p3>
+                    </span>
+                    <span>
+                        <div class="cool_image">
+                            <img src="cool\cool7.png"width="150px">
+                        </div>
+                        <p1>♥</p1>
+                        <p2>샀어요 스투시</p2>
+                        <p3>100,000원</p3>
+                    </span>
+                    <span>
+                        <div class="cute_image">
+                            <img src="cute\cute1.png" width="150px">
+                        </div>
+                        <p1>♥</p1>
+                        <p2>귀여워요 매도우 세트</p2>
+                        <p3>24,800원</p3>
+                    </span>
+                    <span>
+                        <div class="cute_image">
+                            <img src="cute\cute2.png" width="150px">
+                        </div>
+                        <p1>♥</p1>
+                        <p2>그로밋 머그컵</p2>
+                        <p3>24,900원</p3>
+                    </span>
+                    <span>
+                        <div class="cute_image">
+                            <img src="cute\cute3.png" width="150px">
+                        </div>
+                        <p1>♥</p1>
+                        <p2>귀엽지요? 앵브록스</p2>
+                        <p3>35,000원</p3>
+                    </span>
+                    <span>
+                        <div class="cute_image">
+                            <img src="cute\cute4.png" width="150px">
+                        </div>
+                        <p1>♥</p1>
+                        <p2>이우가마카라스 백팩</p2>
+                        <p3>188,000원</p3>
+                    </span>
+                    <span>
+                        <div class="cute_image">
+                            <img src="cute\cute5.png" width="150px">
+                        </div>
+                        <p1>♥</p1>
+                        <p2>사실 그냥 그런 접시</p2>
+                        <p3>25,000원</p3>
+                    </span>
+                    <span>
+                        <div class="cute_image">
+                            <img src="cute\cute6.png" width="150px">
+                        </div>
+                        <p1>♥</p1>
+                        <p2>깜찍해 keen</p2>
+                        <p3>136,000원</p3>
+                    </span>
+                    <span>
+                        <div class="cute_image">
+                            <img src="cute\cute7.png" width="150px">
+                        </div>
+                        <p1>♥</p1>
+                        <p2>디지털 카메라</p2>
+                        <p3>225,000원</p3>
+                    </span>
+                    <span>
+                        <div class="trash_image">
+                            <img src="trash\trash1.png" width="150px">
+                        </div>
+                        <p1>♥</p1>
+                        <p2>사주고 싶죠? 쏜희 키링</p2>
+                        <p3>측정 불가</p3>
+                    </span>
+                    <span>
+                        <div class="trash_image">
+                            <img src="trash\trash2.png" width="150px">
+                        </div>
+                        <p1>♥</p1>
+                        <p2>바르셀로나 14-15</p2>
+                        <p3>얼마였더라?</p3>
+                    </span>
+                    <span>
+                        <div class="trash_image">
+                            <img src="trash\trash3.png" width="150px">
+                        </div>
+                        <p1>♥</p1>
+                        <p2>간절한 유럽행 티켓</p2>
+                        <p3>대략 오천만원</p3>
+                    </span>
+                    <span>
+                        <div class="trash_image">
+                            <img src="trash\trash4.png" width="150px">
+                        </div>
+                        <p1>♥</p1>
+                        <p2>나도 이펙터</p2>
+                        <p3>285,000원</p3>
+                    </span>
+                </div>
+            </article>
+            <article class="section_1" id="section_1">
+                <h3>멋있는거</h3>
+                <div class="cool">
+                    <span>
+                        <div class="cool_image">
+                            <img src="cool\cool1.png" width="150px">
+                        </div>
+                        <p1>♥</p1>
+                        <p2>캐멋진 살로몬</p2>
+                        <p3>234,000원</p3>
+                    </span>
+                    <span>
+                        <div class="cool_image">
+                            <img src="cool\cool2.png" width="150px">
+                        </div>
+                        <p1>♥</p1>
+                        <p2>짱멋진 눕시</p2>
+                        <p3>345,938원</p3>
+                    </span>
+                    <span>
+                        <div class="cool_image">
+                            <img src="cool\cool3.png" width="115px">
+                        </div>
+                        <p1>♥</p1>
+                        <p2>사고싶어 맥스</p2>
+                        <p3>768,049원</p3>
+                    </span>
+                    <span>
+                        <div class="cool_image">
+                            <img src="cool\cool4.png" width="150px">
+                        </div>
+                        <p1>♥</p1>
+                        <p2>사주세요 칼하트</p2>
+                        <p3>78,000원</p3>
+                    </span>
+                    <span>
+                        <div class="cool_image">
+                            <img src="cool\cool5.png" width="150px">
+                        </div>
+                        <p1>♥</p1>
+                        <p2>내게와 lp</p2>
+                        <p3>188,000원</p3>
+                    </span>
+                    <span>
+                        <div class="cool_image">
+                            <img src="cool\cool7.png"width="150px">
+                        </div>
+                        <p1>♥</p1>
+                        <p2>샀어요 스투시</p2>
+                        <p3>100,000원</p3>
+                    </span>
+                </div>
+            </article>
+            <article class="section_2" id="section_2">
+                <h3>귀여운거</h3>
+                <section class="cute">
+                    <span>
+                        <div class="cute_image">
+                            <img src="cute\cute1.png" width="150px">
+                        </div>
+                        <p1>♥</p1>
+                        <p2>귀여워요 매도우 세트</p2>
+                        <p3>24,800원</p3>
+                    </span>
+                    <span>
+                        <div class="cute_image">
+                            <img src="cute\cute2.png" width="150px">
+                        </div>
+                        <p1>♥</p1>
+                        <p2>그로밋 머그컵</p2>
+                        <p3>24,900원</p3>
+                    </span>
+                    <span>
+                        <div class="cute_image">
+                            <img src="cute\cute3.png" width="150px">
+                        </div>
+                        <p1>♥</p1>
+                        <p2>귀엽지요? 앵브록스</p2>
+                        <p3>35,000원</p3>
+                    </span>
+                    <span>
+                        <div class="cute_image">
+                            <img src="cute\cute4.png" width="150px">
+                        </div>
+                        <p1>♥</p1>
+                        <p2>이우가마카라스 백팩</p2>
+                        <p3>188,000원</p3>
+                    </span>
+                    <span>
+                        <div class="cute_image">
+                            <img src="cute\cute5.png" width="150px">
+                        </div>
+                        <p1>♥</p1>
+                        <p2>사실 그냥 그런 접시</p2>
+                        <p3>25,000원</p3>
+                    </span>
+                    <span>
+                        <div class="cute_image">
+                            <img src="cute\cute6.png" width="150px">
+                        </div>
+                        <p1>♥</p1>
+                        <p2>깜찍해 keen</p2>
+                        <p3>136,000원</p3>
+                    </span>
+                    <span>
+                        <div class="cute_image">
+                            <img src="cute\cute7.png" width="150px">
+                        </div>
+                        <p1>♥</p1>
+                        <p2>디지털 카메라</p2>
+                        <p3>225,000원</p3>
+                    </span>
+                </section>
+            </article>
+            <article class="section_3" id="section_3">
+                <h3>쓸데없는거</h3>
+                    <section class="trash">
+                        <span>
+                            <div class="trash_image">
+                                <img src="trash\trash1.png" width="150px">
+                            </div>
+                            <p1>♥</p1>
+                            <p2>사주고 싶죠? 쏜희 키링</p2>
+                            <p3>측정 불가</p3>
+                        </span>
+                        <span>
+                            <div class="trash_image">
+                                <img src="trash\trash2.png" width="150px">
+                            </div>
+                            <p1>♥</p1>
+                            <p2>바르셀로나 14-15</p2>
+                            <p3>얼마였더라?</p3>
+                        </span>
+                        <span>
+                            <div class="trash_image">
+                                <img src="trash\trash3.png" width="150px">
+                            </div>
+                            <p1>♥</p1>
+                            <p2>간절한 유럽행 티켓</p2>
+                            <p3>대략 오천만원</p3>
+                        </span>
+                        <span>
+                            <div class="trash_image">
+                                <img src="trash\trash4.png" width="150px">
+                            </div>
+                            <p1>♥</p1>
+                            <p2>나도 이펙터</p2>
+                            <p3>285,000원</p3>
+                        </span>
+                    </section>
+            </article>
+        </section>
+    </main>
+    <footer>
+        <h2>credit</h2>
+        <li>html 끄적인 사람 : 지민</li>
+        <li>css 만진 사람 : 지민</li>
+        <li>화내지않고 답답해하지 않고 질문 받아준 웨비들 : 유태승, 이동헌, 김가현 (iOS)</li>
+        <li>불철주야 함께 해준 파짱님: 이재훈</li>
+    </footer>
+</body>

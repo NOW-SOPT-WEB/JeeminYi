@@ -1,0 +1,230 @@
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+header{
+    position: fixed;
+    display: flex;
+    /*flex-direction: row;*/
+    align-items: center;
+    justify-content: space-between;
+    /*top: 0; left: 0; right: 0;*/
+    width: 100%;
+    color: white;
+    font-family: 'Pretendard-Regular'; font-size: large;
+    line-height: 1;
+    z-index: 2;
+}
+header img{
+    width: 50px;
+    margin: 15px;
+}
+html{
+    width: 100%; height: 100%;
+}
+main{
+    display: flex;
+    flex-direction: row;
+    margin-top: 70px; margin-bottom: 30px; width: 100%;
+}
+/*네비*/
+.navigation_area{
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+}
+.wish_list{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 180px; height: 210px;
+    border: 1px solid black; border-radius: 10px;
+    margin: 50% 50px;
+}
+.wish_list h2{
+    font-family: 'Pretendard-Regular';font-weight: bold; text-align: center; font-size: large;
+    margin-top: 20px;
+}
+.wish_list ul{
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    margin-top: 60px;
+    border-radius: 10px;
+    font-family: 'Pretendard-Regular'; font-weight: 200;line-height: 1.5; text-align: center;font-size: large;
+    list-style-type: none;
+    background-color: rgb(216, 216, 216);
+    width: 120px;height: 120px;
+    padding: 10px 10px;
+    text-decoration: none;
+    color: black;
+}
+
+.wish_list ul li a{
+    text-decoration: none;
+    color: black;
+}
+.wish_list ul li:hover a{
+    background: black;
+    color: white;
+    border-radius: 9px; margin-left: 5px; margin-right: 5px;
+}
+.wish_list ul li:hover {
+    background: black;
+    color: white; /*list를 attribute로 하지 않으면 hover했을 때 흰색으로 텍스트가 변하는데 attribute 적용하니까 color 추가해도 색이 안바뀜 ㅠ*/
+    border-radius: 9px; margin-left: 5px; margin-right: 5px;
+}
+/* .wish_list ul li a:hover{
+    color: white;
+}
+
+
+
+
+/*메인섹션*/
+.img_area{
+    display: flex;
+    flex-direction: column;
+    /*justify-content: space-between;*/
+    align-items: stretch;
+    width: 72%; /*width 값을 지정하는게 너머넘너머 어려웠는데, 그냥 눈대중으로 70%면 되겠다~ 해서 하는게 맞는건지,, ㅋ ㅋ화면에 넘치지 않고 꽉 차는 값을 어케 지정할까요..*/
+    padding-right: 30px;
+    margin-left: 290px; /*메인 안에 flex - row로 section을 두개로 레이아웃을 잡으려고 했는데, nav section을 fixed로 주니 메인 섹션이 자꾸만 침범해서 왼쪽 마진을 줘버렸습니다.. 왜 침범하는 것일까요..*/
+}
+/*움직이는 배너 이미지*/
+/*투두 하고나서 배너 list로 무한 스크롤하게 만들어보기*/
+.banner{
+    overflow: hidden;
+    margin: 10px 20px; /*반응형으로 했을 때 마진값이 왜 자꾸 감소하는지 궁금하다*/
+}
+.slide_image{
+    display: flex;
+    flex-direction: row;
+    margin: 20px 10px;
+    width: 100%;
+    animation: roll 10s linear infinite;
+}
+@keyframes roll{
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(-100%);
+    }
+}
+.slide{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+}
+/*얘네들이 header 영역을 침범함 진심 왤까*/
+
+
+/*위시품목들*/
+article{
+    display: flex;
+    flex-direction: column;
+}
+article h3{
+    font-family: 'Pretendard-Regular'; font-weight: bold;line-height: 1.5; font-size:x-large;
+    margin-left: 20px;
+}
+.all {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-content: space-around;
+    flex-wrap: wrap;
+}
+.cool {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-content: space-around;
+    flex-wrap: wrap;
+}
+.cute {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-content: space-around;
+    flex-wrap: wrap;
+}
+.trash {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-content: space-around;
+    flex-wrap: wrap;
+}
+span{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(235, 235, 235);
+    border-radius: 5px;
+    width: 200px; height: 270px;
+    margin-top: 5px; margin-bottom: 5px; margin-left: 20px;
+}
+span:hover{
+    animation: span 2.5s infinite;
+    transition: ease; /*hover 했을 때 얘네들이 header 영역을 침범함*/
+}
+@keyframes span{
+    0% {transform: scale(1);}
+    25% {transform: scale(.96);}
+    50% {transform: scale(1.02);}
+    75% {transform: scale(.96);}
+    100% {transform: scale(1);}
+}
+span p1{
+    font-family: 'Pretendard-Regular';font-weight: bold; text-align: center; font-size: x-large;
+    margin: 3px; padding-left: 5px; padding-right: 5px;
+}
+span p1:hover{
+    color: rgb(248, 156, 171);
+}
+span p2{
+    font-family: 'Pretendard-Regular';font-weight: bold; text-align: center; font-size: large;
+    margin: 3px; padding-left: 5px; padding-right: 5px;
+}
+span p3{
+    font-family: 'Pretendard-Regular';font-weight: 200; text-align: center; font-size: large;
+    margin-top: 3px; margin-left: 3px; margin-right: 3px; margin-bottom: 15px;
+    padding-left: 5px; padding-right: 5px;
+}
+.cool_image{
+    display: flex;
+    justify-content: center;
+    margin-top: 15px; margin-left: 15px; margin-right: 15px;
+    align-items: center;
+}
+.cute_image{
+    display: flex;
+    justify-content: center;
+    margin-top: 15px; margin-left: 15px; margin-right: 15px;
+    align-items: center;
+}
+.trash_image{
+    display: flex;
+    justify-content: center;
+    margin-top: 15px; margin-left: 15px; margin-right: 15px;
+    align-items: center;
+}
+/*하단*/
+footer{
+    box-sizing: border-box;
+    background-color: rgb(255, 195, 83);
+    display: block;
+    font-family: 'Pretendard-Regular';
+    font-weight: 100;
+    text-align: center; 
+    margin: 0; padding: 0;
+    list-style-type: none; line-height: 25px;
+    padding-bottom: 20px;
+}
