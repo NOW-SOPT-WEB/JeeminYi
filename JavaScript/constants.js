@@ -79,7 +79,7 @@ export const itemList = [
   },
   {
     id: 12,
-    item_name: "t사실 그냥 그런 접시",
+    item_name: "사실 그냥 그런 접시",
     item_price: 25000,
     category: "cute",
     img: "cute5.png",

@@ -8,8 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
     productItems.forEach(function (item) {
       const itemCategory = item.getAttribute("data-category");
       if (category === "all" || itemCategory === category) {
-        item.style.display = "block";
-        item.style.textAlign = "center"; // css 스타일 유지
+        item.style.display = "flex";
       } else {
         item.style.display = "none";
       }
