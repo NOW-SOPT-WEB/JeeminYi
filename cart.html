@@ -1,49 +1,55 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>지민이의 장바구니</title>
-    <link href="./stylesheet/cart.style.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-</head>
-<body>
+    <link href="./stylesheet/cart.style.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+  </head>
+  <body>
     <aside class="sidebar">
-        <ul>
-            <span class="material-symbols-outlined">arrow_forward</span>
-            <li class="cart-list">관심 상품 목록</li>
-            <li class="setting-page">관리자 페이지</li>
-            <li class="cart">장바구니</li>
-        </ul>
+      <ul>
+        <span class="material-symbols-outlined">arrow_forward</span>
+        <li class="cart-list">관심 상품 목록</li>
+        <li class="setting-page">관리자 페이지</li>
+        <li class="cart">장바구니</li>
+      </ul>
     </aside>
     <header class="header">
-        <img class="home-btn" src="./img/icon/logo.png" alt="홈 버튼">
-        <h1>지민이의 장바구니</h1>
-        <img class="menu-btn" src="./img/icon/menu.png" alt="메뉴 버튼">
+      <img class="home-btn" src="./img/icon/logo.png" alt="홈 버튼" />
+      <h1>지민이의 장바구니</h1>
+      <img class="menu-btn" src="./img/icon/menu.png" alt="메뉴 버튼" />
     </header>
     <section class="main-section">
-        <article class="cart-area">
-            <table id="cart-table">
-                <thead>
-                    <tr>
-                        <th>
-                            <input type="checkbox" name="selcet">
-                        </th>
-                        <th class="information_list" colspan="2">상품 정보</th>
-                        <th class="price_list">상품 금액</th>
-                        <th class="category_list">카테고리</th>
-                        <th class="delete_list">비고</th>
-                    </tr>
-                </thead>
-                <tbody>
-                </tbody>
-            </table>
-        </article>
-        <article class="button-section">
-            <button class="buy-button">넌 내거야</button>
-            <button class="go-to-home-button">홈으로</button>
-        </article>
+      <article class="cart-area">
+        <table id="cart-table">
+          <thead>
+            <tr>
+              <th>
+                <input type="checkbox" name="selcet" />
+              </th>
+              <th class="information_list" colspan="2">상품 정보</th>
+              <th class="price_list">상품 금액</th>
+              <th class="category_list">카테고리</th>
+              <th class="delete_list">비고</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </article>
+      <article class="button-section">
+        <button class="buy-button">넌 내거야</button>
+        <button class="go-to-home-button">홈으로</button>
+      </article>
     </section>
-    <script src="./index.js"></script>
-</body>
+    <script src="./JavaScript/index.js"></script>
+    <script src="./JavaScript/constants.js"></script>
+    <script src="./JavaScript/sidebar.js"></script>
+    <script src="./JavaScript/wishlist.js"></script>
+    <script src="./JavaScript/nav.js"></script>
+  </body>
 </html>
