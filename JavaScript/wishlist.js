@@ -8,7 +8,7 @@ const productContainer = function () {
     return `
     <article class = "wishItem" data-category="${item.category}">
       <img src=${`img/${item.category}/${item.img}`}>
-      <span>♥</span>
+      <span class="likeBtn">♥</span>
       <h4>${item.item_name}</h4>
       <p>${item.item_price.toLocaleString()}원</p>
     </article>
@@ -20,14 +20,14 @@ productContainer();
 
 // item 클릭 시 알럿 노출
 document.addEventListener("DOMContentLoaded", function () {
-  const SHOPPING_LIST = document.querySelector(".wishItem");
+  const SHOPPING_LIST = document.querySelectorAll(".wishItem");
 
   SHOPPING_LIST.forEach(function (productList) {
     productList.addEventListener("click", function (event) {
       const imageSrc = productList.querySelector("img").src;
-      const itemName = productList.querySelector("item_name").textContent;
-      const itemPrice = productList.querySelector("item_price").textContent;
-      const itemCategory = productList.getAttribute("category").textContent;
+      const itemName = productList.querySelector("h4").textContent;
+      const itemPrice = productList.querySelector("p").textContent;
+      const itemCategory = productList.getAttribute("category");
 
       //확인버튼 눌렀을 경우
       const confirmed = confirm(`장바구니에 ${itemName} 담기!`);

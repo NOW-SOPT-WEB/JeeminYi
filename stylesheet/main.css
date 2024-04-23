@@ -4,10 +4,6 @@
   flex-wrap: wrap;
   padding-top: 4rem;
   margin-top: -4rem;
-  h1 {
-    margin-left: 1rem;
-    font-size: x-large;
-  }
 }
 .wishItem {
   flex-wrap: wrap;
@@ -20,17 +16,18 @@
   background-color: rgb(244, 244, 244);
   border-radius: 1rem;
   cursor: pointer;
-  span,
-  h4,
-  p.item_price {
-    margin: 0.4rem 0;
-  }
-  span:hover {
-    color: palevioletred;
-  }
-  h4 {
-    font-weight: 800;
-  }
+  z-index: 4;
+}
+.likeBtn,
+h4,
+p.item_price {
+  margin: 0.4rem 0;
+}
+.likeBtn:hover {
+  color: palevioletred;
+}
+h4 {
+  font-weight: 800;
 }
 img {
   width: 8rem;
