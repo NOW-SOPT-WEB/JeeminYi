@@ -1,4 +1,4 @@
-// //2번 nav filter
+// //nav filter
 document.addEventListener("DOMContentLoaded", function () {
   const navButtons = document.querySelectorAll(".nav-button");
   const productSection = document.querySelector(".wishList");

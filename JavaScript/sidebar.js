@@ -1,4 +1,4 @@
-//3번 sidebar
+//sidebar
 const sideBar = document.querySelector(".sidebar");
 const sideBarBtn = document.querySelector(".menu-btn");
 const BackBtn = document.querySelector(".material-symbols-outlined");
@@ -9,7 +9,6 @@ function openToggle() {
 
 sideBarBtn.addEventListener("click", openToggle);
 BackBtn.addEventListener("click", function () {
-  //왜 여기서는 그냥 openToggle을 바로 쓰지 않는지 궁금합니다.
   openToggle();
 });
 

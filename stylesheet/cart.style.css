@@ -15,7 +15,6 @@ html {
 }
 body {
   width: 100%;
-  height: 100%;
   margin: 0;
 }
 .header {
@@ -79,7 +78,8 @@ section {
   margin-top: 4rem;
   justify-content: center;
   align-items: center;
-  button {
+  .buy-button,
+  .go-to-home-button {
     all: unset;
     font-family: "Pretendard-Regular";
     border-radius: 9px;
@@ -99,7 +99,7 @@ section {
 .cart-area {
   justify-content: center;
   align-items: center;
-  margin-top: 6rem;
+  margin-top: 5rem;
   max-height: 350px;
   overflow-y: scroll;
 }
@@ -137,10 +137,72 @@ td {
   img {
     width: 8rem;
   }
-  button {
+  .buy-button,
+  .go-to-home-button {
     justify-content: center;
     align-items: center;
     align-self: center;
+  }
+}
+/*모달 영역*/
+h2 {
+  text-align: center;
+}
+.buyModal {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0.5);
+}
+.buyModalPopup {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  top: 50%;
+  left: 45%;
+  background-color: white;
+  border-radius: 20px;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  .material-symbols-outlined {
+    float: right;
+    align-self: flex-end;
+  }
+  .buyModalButton {
+    all: unset;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: black;
+    color: white;
+    border-radius: 9px;
+    padding: 0.5rem;
+    cursor: pointer;
+  }
+}
+.buyModal.on {
+  display: flex;
+}
+.buyListArea {
+  display: flex;
+  flex-direction: row;
+}
+.modalBuyListArea {
+  display: flex;
+  flex-direction: column;
+}
+.modal-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  img {
+    width: 5rem;
   }
 }
 
