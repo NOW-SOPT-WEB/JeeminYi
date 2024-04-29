@@ -1,0 +1,44 @@
+@import url(wishlist_header.css);
+@import url(wishlist_nav.css);
+@import url(wishlist_main.css);
+@import url(wishlist_footer.css);
+
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+*{
+    font-family: 'Pretendard-Regular';
+    box-sizing: border-box;
+}
+
+
+html{
+    width: 100%; height: 100%;
+}
+body{
+    width: 100%; height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+.main-area{
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    margin-top: 4rem;
+}
+.image-area{
+    display: flex;
+    flex-direction: column;
+    max-width: 70rem;
+    margin-left: 1rem;
+    padding-left: 6rem;
+}
+
+
+
+@import url(wishlist_reset.css);
