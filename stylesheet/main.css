@@ -1,0 +1,99 @@
+.wishList {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding-top: 4rem;
+  margin-top: -4rem;
+}
+.wishItem {
+  flex-wrap: wrap;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0.3rem 0.5rem;
+  padding: 0 1.2rem;
+  padding-bottom: 1rem;
+  background-color: rgb(244, 244, 244);
+  border-radius: 1rem;
+  cursor: pointer;
+  z-index: 4;
+}
+.likeBtn,
+h4,
+p.item_price {
+  margin: 0.4rem 0;
+}
+.likeBtn:hover {
+  color: palevioletred;
+}
+h4 {
+  font-weight: 800;
+}
+img {
+  width: 8rem;
+  margin-top: 0.5rem;
+}
+.wishItem:hover {
+  animation: bounce 2.5s infinite;
+  transition: ease;
+}
+.banner {
+  margin-left: 1rem;
+  padding-left: 6rem;
+  overflow: hidden;
+}
+.slide {
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  animation: roll 10s linear infinite;
+  margin-left: 1rem;
+}
+.slide-img {
+  width: 8rem;
+}
+
+.wishItem {
+  flex: 0 0 auto;
+}
+
+@media (max-width: 950px) {
+  .wishItem {
+    flex-basis: 250px;
+    height: 300px;
+  }
+}
+
+@media (max-width: 900px) {
+  .wishItem {
+    flex-basis: 300px;
+    height: 355px;
+  }
+}
+
+@keyframes roll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+@keyframes bounce {
+  0% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(0.96);
+  }
+  50% {
+    transform: scale(1.02);
+  }
+  75% {
+    transform: scale(0.96);
+  }
+  100% {
+    transform: scale(1);
+  }
+}

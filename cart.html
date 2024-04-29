@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>지민이의 장바구니</title>
+    <link href="./stylesheet/cart.style.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+  </head>
+  <body>
+    <aside class="sidebar">
+      <ul>
+        <span class="material-symbols-outlined">arrow_forward</span>
+        <li class="cart-list">관심 상품 목록</li>
+        <li class="setting-page">관리자 페이지</li>
+        <li class="cart">장바구니</li>
+      </ul>
+    </aside>
+    <header class="header">
+      <img class="home-btn" src="./img/icon/logo.png" alt="홈 버튼" />
+      <h1>지민이의 장바구니</h1>
+      <img class="menu-btn" src="./img/icon/menu.png" alt="메뉴 버튼" />
+    </header>
+    <section class="main-section">
+      <article class="cart-area">
+        <table id="cart-table">
+          <thead>
+            <tr>
+              <th>
+                <input type="checkbox" name="selcet" />
+              </th>
+              <th class="information_list" colspan="2">상품 정보</th>
+              <th class="price_list">상품 금액</th>
+              <th class="category_list">카테고리</th>
+              <th class="delete_list">비고</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </article>
+      <article class="button-section">
+        <button class="buy-button">넌 내거야</button>
+        <button class="go-to-home-button">홈으로</button>
+      </article>
+      <!--모달 영역-->
+      <div class="buyModal">
+        <div class="buyModalPopup">
+          <span class="material-symbols-outlined"> close </span>
+          <h3>지민이에게 선물하기</h3>
+          <div class="modalBuyListArea">
+            <span class="buyListArea"></span>
+          </div>
+          <button type="button" class="buyModalButton">구매하기</button>
+        </div>
+      </div>
+      <!--모달 영역-->
+    </section>
+    <script src="./JavaScript/index.js" type="module"></script>
+    <script src="./JavaScript/constants.js" type="module"></script>
+    <script src="./JavaScript/sidebar.js" type="module"></script>
+    <script src="./JavaScript/wishlist.js" type="module"></script>
+    <script src="./JavaScript/nav.js" type="module"></script>
+    <script src="./JavaScript/modal.js" type="module"></script>
+  </body>
+</html>
