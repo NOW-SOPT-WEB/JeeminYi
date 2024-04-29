@@ -14,9 +14,8 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   }
-
   // 버튼에 클릭 이벤트 리스너 추가
-  navButtons.forEach(function (button) {
+  navButtons.forEach((button) => {
     button.addEventListener("click", function () {
       const filterCategory = button.getAttribute("data-filter-nav");
       filterItems(filterCategory);

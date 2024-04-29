@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
   function addListToCart() {
     const confirmedItems = JSON.parse(localStorage.getItem("item")); // []
     confirmedItems.forEach((confirmedItem) => {
-      total += Number(confirmedItem.price);
+      total += parseInt(confirmedItem.price);
       const addNewRow = document.createElement("tr");
 
       const addItemCheckbox = document.createElement("td");
@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function () {
       addItemName.textContent = confirmedItem.name;
 
       const addItemPrice = document.createElement("td");
-      addItemPrice.textContent = Number(confirmedItem.price).toLocaleString();
+      addItemPrice.textContent = confirmedItem.price.toLocaleString();
 
       const addItemCategory = document.createElement("td");
       addItemCategory.textContent = confirmedItem.categoryName;
@@ -115,7 +115,7 @@ function addListToModal() {
     modalItemName.textContent = item.name;
 
     const modalItemPrice = document.createElement("span");
-    modalItemPrice.textContent = Number(item.price).toLocaleString();
+    modalItemPrice.textContent = item.price.toLocaleString();
 
     modalListItem.append(modalItemImg, modalItemName, modalItemPrice);
 

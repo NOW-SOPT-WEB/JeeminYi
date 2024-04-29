@@ -1,5 +1,5 @@
 //wishlist 상수 데이터로 랜더링하기
-export const itemList = [
+export const ITEM_LIST = [
   {
     id: 1,
     item_name: "캐멋진 살로몬",

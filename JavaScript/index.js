@@ -1,3 +1,6 @@
+// //상수 데이터 랜더링하기
+import { ITEM_LIST } from "./constants.js";
+
 //페이지 이동
 const homeBtn = document.querySelector(".home-btn");
 
@@ -7,13 +10,10 @@ homeBtn.addEventListener("click", function () {
   window.location.href = homePageUrl;
 });
 
-// //상수 데이터 랜더링하기
-import { itemList } from "./constants.js";
-
 // //상수 데이터 > 전체 상품 넣기
 const productContainer = function () {
   const productSection = document.querySelector(".wishList");
-  const productImg = itemList.map((item) => {
+  const productImg = ITEM_LIST.map((item) => {
     return `
     <article class = "wishItem" data-category="${item.category}" data-id="${
       item.id
