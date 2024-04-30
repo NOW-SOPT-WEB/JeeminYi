@@ -1,35 +1,29 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import "./App.css";
+import theme from "./stylesheet/theme"; // eslint-disable-line no-unused-vars
+import { createGlobalStyle } from "styled-components"; // eslint-disable-line no-unused-vars
+import Header from "./components/header/header"; // eslint-disable-line no-unused-vars
+import HeaderSection from "./components/header/header-style";
+import ButtonSection from "./components/button/button-style";
+import Button from "./components/button/button"; // eslint-disable-line no-unused-vars
+import CardContainer from "./components/card/cardContainer";
+
+const GlobalStyle = createGlobalStyle`
+  ${theme.fontFaces}
+`;
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <GlobalStyle />
+      <HeaderSection>
+        <Header />
+      </HeaderSection>
+      <ButtonSection>
+        <Button />
+      </ButtonSection>
+      <CardContainer />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
