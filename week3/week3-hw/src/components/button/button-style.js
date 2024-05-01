@@ -1,5 +1,6 @@
 import styled from "styled-components";
 const ButtonSection = styled.div`
+  margin-top: 8rem;
   .button {
     color: white;
     background-color: black;
