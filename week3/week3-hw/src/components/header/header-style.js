@@ -3,6 +3,7 @@ import theme from "../../stylesheet/theme";
 
 const HeaderSection = styled.header`
   width: 100%;
+  z-index: 9;
   height: 7.5rem;
   margin: 0;
   background-color: ${theme.colors.toasterDarkOrange};
@@ -16,7 +17,7 @@ const HeaderSection = styled.header`
     color: white;
     font-size: 1.7rem;
     font-weight: 800;
-    margin-top: 1%.5;
+    margin-top: 1.5rem;
   }
   .HeaderScore {
     color: white;

@@ -1,8 +1,5 @@
-import { useShuffleCards } from "../card/card";
 import HeaderSection from "./header-style";
-function Header() {
-  const { shuffleCards } = useShuffleCards();
-
+function Header({ shuffleCards }) {
   const handleClick = () => {
     shuffleCards(); // shuffleCards 함수 호출
     console.log("click");
