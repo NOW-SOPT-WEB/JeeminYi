@@ -1,8 +1,7 @@
 import HeaderSection from "./header-style";
 function Header({ shuffleCards }) {
   const handleClick = () => {
-    shuffleCards(); // shuffleCards 함수 호출
-    console.log("click");
+    shuffleCards();
   };
 
   return (
