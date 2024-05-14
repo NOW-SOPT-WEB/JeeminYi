@@ -18,4 +18,7 @@ module.exports = {
       { allowConstantExport: true },
     ],
   },
+  module:exports = {
+    parser: "babel-eslint",
+  },
 }
