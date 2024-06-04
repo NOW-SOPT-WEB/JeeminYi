@@ -1,0 +1,6 @@
+.header {
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+  background-color: gainsboro;
+}
