@@ -1,13 +1,11 @@
 import GlobalStyle from "./styles/globalStyle";
-import { DefaultHeader } from "./components/header";
-import { MainWrapper } from "./components/mainWrapper";
+import { DefaultPage } from "./page/defaulPage";
 
 function App() {
   return (
     <>
       <GlobalStyle />
-      <DefaultHeader />
-      <MainWrapper />
+      <DefaultPage />
     </>
   );
 }
