@@ -106,6 +106,9 @@ const Thirdbox = styled.div`
   border-color: lightgray;
   border-radius: 1rem;
   cursor: pointer;
+  &:hover {
+    border-color: black;
+  }
 `;
 
 const BtnWrapper = styled.div`

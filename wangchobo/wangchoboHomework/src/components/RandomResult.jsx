@@ -64,13 +64,14 @@ const ResultWrapper = styled.div`
 const FoodImg = styled.img`
   height: 25rem;
   width: auto;
+  border-radius: 1.5rem;
 `;
 
 const FoodName = styled.p`
   color: black;
   font-size: large;
   font-weight: 600;
-  margin-top: 1rem;
+  margin-top: 1.7rem;
 `;
 
 const RetryBtn = styled.button`
@@ -80,7 +81,7 @@ const RetryBtn = styled.button`
   background-color: black;
   font-size: medium;
   font-weight: 400;
-  margin-top: 2.1rem;
+  margin-top: 1.5rem;
   color: white;
   &:hover {
     background-color: #ffd438;

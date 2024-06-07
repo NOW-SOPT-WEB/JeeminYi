@@ -37,7 +37,7 @@ export const FoodData = [
     category: "rice",
     isSoup: true,
     name: "미소된장국",
-    img: "https://recipe1.ezmember.co.kr/cache/recipe/2022/08/12/598fe2dd9eab09b9bbfdf679489f3dea1.jpg",
+    img: "https://blog.kakaocdn.net/dn/GOZ8v/btrKkuJ32Dd/RbfQVzDIJreTYe7mTXyjwK/img.jpg",
   },
   {
     id: 6,
@@ -143,5 +143,4 @@ export const FoodData = [
     name: "해물 짬뽕",
     img: "https://thenaum.cdn-nhncommerce.com/data/goods//16/10/26/1000001210/1000001210_detail_097.jpg",
   },
-  {},
 ];
