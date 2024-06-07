@@ -11,7 +11,7 @@ const SecondRoundRandom = ({ setStep }) => {
       </SecondWrapper>
       <StartBtn
         onClick={() => {
-          setStep("third");
+          setStep("randomResult");
         }}
       >
         Start!

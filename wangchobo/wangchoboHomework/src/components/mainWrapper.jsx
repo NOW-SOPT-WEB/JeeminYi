@@ -7,6 +7,7 @@ import ThirdRound from "./ThirdRound";
 import FourthRound from "./FourthRound";
 import FifthRound from "./FifthRound";
 import SixthRound from "./SixthRound";
+import RandomResult from "./RandomResult";
 
 export const MainWrapper = ({ onClickStartBtn }) => {
   //라운드 상태 관리
@@ -35,6 +36,7 @@ export const MainWrapper = ({ onClickStartBtn }) => {
         {step === "fourth" && <FourthRound setStep={setStep} />}
         {step === "fifth" && <FifthRound setStep={setStep} />}
         {step === "sixth" && <SixthRound setStep={setStep} />}
+        {step === "randomResult" && <RandomResult setStep={setStep} />}
       </BoxWrapper>
     </PageWrapper>
   );
