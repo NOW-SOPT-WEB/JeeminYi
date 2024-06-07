@@ -1,40 +1,34 @@
 import styled from "styled-components";
 
-const SecondRoundRecomm = ({ setStep }) => {
+const SixthRound = ({ setStep }) => {
   return (
     <PageWrapper>
-      <TitleWrapper>원하는 추천 방식을 골라봐~</TitleWrapper>
-      <SecondWrapper>
-        취향대로
-        <br />
-        추천
-      </SecondWrapper>
-      <StartBtn
+      <TitleWrapper>오늘의 점메추는 바로바로</TitleWrapper>
+      <RetryBtn
         onClick={() => {
-          setStep("third");
+          setStep("first");
         }}
       >
-        Start!
-      </StartBtn>
+        다시하기
+      </RetryBtn>
     </PageWrapper>
   );
 };
 
-export default SecondRoundRecomm;
+export default SixthRound;
 
 const PageWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 4rem;
   margin-top: 2rem;
+  gap: 6rem;
 `;
 
 const TitleWrapper = styled.span`
   justify-content: center;
   width: 45rem;
   height: 5rem;
-  margin-top: 2rem;
   background-color: white;
   color: black;
   font-size: large;
@@ -44,22 +38,7 @@ const TitleWrapper = styled.span`
   border-radius: 1rem;
 `;
 
-const SecondWrapper = styled.div`
-  width: 45rem;
-  height: 25rem;
-  background-color: white;
-  border-radius: 2rem;
-  white-space: pre-wrap;
-  text-align: center;
-  align-content: center;
-  line-height: 5rem;
-  font-size: xx-large;
-  font-weight: 800;
-  border: 1.5px solid black;
-  border-radius: 1rem;
-`;
-
-const StartBtn = styled.button`
+const RetryBtn = styled.button`
   width: 8.5rem;
   height: 3rem;
   border-radius: 0.5rem;

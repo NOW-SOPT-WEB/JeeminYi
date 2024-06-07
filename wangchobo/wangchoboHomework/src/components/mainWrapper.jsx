@@ -1,11 +1,40 @@
 import styled from "styled-components";
 import { FirstRound } from "./firstRound";
+import { useState } from "react";
+import SecondRoundRecomm from "./SecondRoundRecomm";
+import SecondRoundRandom from "./SecondRoundRandom";
+import ThirdRound from "./ThirdRound";
+import FourthRound from "./FourthRound";
+import FifthRound from "./FifthRound";
+import SixthRound from "./SixthRound";
 
 export const MainWrapper = ({ onClickStartBtn }) => {
+  //라운드 상태 관리
+  const [step, setStep] = useState("first"); // fisrt: <FirstRound /> secondOne : <SecondRoundRecomm /> secondTwo : <SecondRoundRandom /> third : <ThirdRound />
+  //음식 데이터 filter 관리
+  const [foodArray, setFoodArray] = useState([]);
+  //Next 버튼 비활성화 (선택 여부 확인)
+  const [isSelected, setIsSelected] = useState(false);
   return (
     <PageWrapper>
       <BoxWrapper>
-        <FirstRound onClickStartBtn={onClickStartBtn} />
+        {step === "first" && (
+          <FirstRound onClickStartBtn={onClickStartBtn} setStep={setStep} />
+        )}
+        {step === "secondOne" && <SecondRoundRecomm setStep={setStep} />}
+        {step === "secondTwo" && <SecondRoundRandom setStep={setStep} />}
+        {step === "third" && (
+          <ThirdRound
+            setStep={setStep}
+            foodArray={foodArray}
+            setFoodArray={setFoodArray}
+            isSelected={isSelected}
+            setIsSelected={setIsSelected}
+          />
+        )}
+        {step === "fourth" && <FourthRound setStep={setStep} />}
+        {step === "fifth" && <FifthRound setStep={setStep} />}
+        {step === "sixth" && <SixthRound setStep={setStep} />}
       </BoxWrapper>
     </PageWrapper>
   );
@@ -20,13 +49,10 @@ const PageWrapper = styled.div`
 const BoxWrapper = styled.div`
   display: flex;
   justify-content: center;
-  /* align-items: center;
-  align-self: center;
-  align-content: center; */
   margin-top: 20rem;
   width: 100rem;
   height: 50rem;
-  background-color: #f7f7f7;
+  background-color: #ededed;
   border-radius: 2rem;
   box-shadow: 1px 1px 20px lightgray;
 `;
