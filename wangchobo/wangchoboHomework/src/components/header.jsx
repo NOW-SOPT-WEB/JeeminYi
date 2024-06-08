@@ -7,7 +7,7 @@ export const DefaultHeader = ({ isBtnClick, setStep }) => {
       {isBtnClick && (
         <HeaderBtn
           onClick={() => {
-            setStep("third");
+            setStep("first");
           }}
         >
           처음으로

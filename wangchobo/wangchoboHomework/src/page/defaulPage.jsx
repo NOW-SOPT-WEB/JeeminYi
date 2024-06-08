@@ -9,10 +9,16 @@ export const DefaultPage = () => {
   const onClickStartBtn = () => {
     setIsBtnClick(!isBtnClick);
   };
+  //라운드 상태 관리
+  const [step, setStep] = useState("first"); //fisrt: <FirstRound /> secondOne : <SecondRoundRecomm /> secondTwo : <SecondRoundRandom /> third : <ThirdRound />
   return (
     <>
-      <DefaultHeader isBtnClick={isBtnClick} />
-      <MainWrapper onClickStartBtn={onClickStartBtn} />
+      <DefaultHeader isBtnClick={isBtnClick} step={step} setStep={setStep} />
+      <MainWrapper
+        onClickStartBtn={onClickStartBtn}
+        step={step}
+        setStep={setStep}
+      />
     </>
   );
 };
