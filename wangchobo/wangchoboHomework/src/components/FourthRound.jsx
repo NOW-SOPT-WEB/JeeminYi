@@ -1,14 +1,36 @@
 import styled from "styled-components";
 
-const FourthRound = ({ setStep }) => {
+const FourthRound = ({ setStep, isClicked, setIsClicked }) => {
   return (
     <PageWrapper>
       <TitleWrapper>이 중에 땡기는 건?</TitleWrapper>
       <H4>2 / 3</H4>
       <MoodWrapper>
-        <Fourthbox>밥</Fourthbox>
-        <Fourthbox>면</Fourthbox>
-        <Fourthbox>고기/해물</Fourthbox>
+        <Fourthbox
+          className={`rice ${isClicked === "first" && "clicked"}`}
+          onClick={() => {
+            // filterFood("korea");
+            setIsClicked("first");
+          }}
+        >
+          밥
+        </Fourthbox>
+        <Fourthbox
+          className={`noodle ${isClicked === "second" && "clicked"}`}
+          onClick={() => {
+            setIsClicked("second");
+          }}
+        >
+          면
+        </Fourthbox>
+        <Fourthbox
+          className={`meat ${isClicked === "third" && "clicked"}`}
+          onClick={() => {
+            setIsClicked("third");
+          }}
+        >
+          고기/해물
+        </Fourthbox>
       </MoodWrapper>
       <BtnWrapper>
         <PrevBtn
@@ -82,6 +104,11 @@ const Fourthbox = styled.div`
   border-radius: 1rem;
   &:hover {
     border-color: black;
+  }
+  &.clicked {
+    background-color: black;
+    color: white;
+    border: none;
   }
 `;
 

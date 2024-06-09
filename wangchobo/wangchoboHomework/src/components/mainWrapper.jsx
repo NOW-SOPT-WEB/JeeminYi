@@ -14,6 +14,8 @@ export const MainWrapper = ({ step, setStep }) => {
   const [foodArray, setFoodArray] = useState([]);
   //Next 버튼 비활성화 (선택 여부 확인)
   const [isSelected, setIsSelected] = useState(false);
+  // 음식 선택 시 스타일 적용
+  const [isClicked, setIsClicked] = useState("");
   return (
     <PageWrapper>
       <BoxWrapper>
@@ -27,10 +29,24 @@ export const MainWrapper = ({ step, setStep }) => {
             setFoodArray={setFoodArray}
             isSelected={isSelected}
             setIsSelected={setIsSelected}
+            isClicked={isClicked}
+            setIsClicked={setIsClicked}
           />
         )}
-        {step === "fourth" && <FourthRound setStep={setStep} />}
-        {step === "fifth" && <FifthRound setStep={setStep} />}
+        {step === "fourth" && (
+          <FourthRound
+            setStep={setStep}
+            isClicked={isClicked}
+            setIsClicked={setIsClicked}
+          />
+        )}
+        {step === "fifth" && (
+          <FifthRound
+            setStep={setStep}
+            isClicked={isClicked}
+            setIsClicked={setIsClicked}
+          />
+        )}
         {step === "sixth" && <SixthRound setStep={setStep} />}
         {step === "randomResult" && <RandomResult setStep={setStep} />}
       </BoxWrapper>

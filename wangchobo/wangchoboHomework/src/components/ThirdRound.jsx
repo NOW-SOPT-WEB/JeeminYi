@@ -1,12 +1,13 @@
 import styled from "styled-components";
-import { FoodData } from "../constants/FoodData";
+// import { FoodData } from "../constants/FoodData";
 
-const ThirdRound = ({ setStep, setFoodArray, isSelected, setIsSelected }) => {
-  const filterFood = (nation) => {
-    const filterFoodArray = FoodData.filter((value) => value.includes(nation));
-    setFoodArray(filterFoodArray);
-    setIsSelected(true);
-  };
+const ThirdRound = ({ setStep, isClicked, setIsClicked }) => {
+  //   const filterFood = (nation) => {
+  //     const filterFoodArray = FoodData.filter((value) => value.includes(nation));
+  //     setFoodArray(filterFoodArray);
+  //     setIsSelected(true);
+  //   };
+  //setStep, setFoodArray, isSelected, setIsSelected
 
   return (
     <PageWrapper>
@@ -14,23 +15,28 @@ const ThirdRound = ({ setStep, setFoodArray, isSelected, setIsSelected }) => {
       <H4>1 / 3</H4>
       <MoodWrapper>
         <Thirdbox
-          id="korea"
+          className={`korea ${isClicked === "first" && "clicked"}`}
           onClick={() => {
-            filterFood("korea");
+            // filterFood("korea");
+            setIsClicked("first");
           }}
         >
           한식
         </Thirdbox>
         <Thirdbox
+          className={`japan ${isClicked === "second" && "clicked"}`}
           onClick={() => {
-            filterFood("japan");
+            // filterFood("japan");
+            setIsClicked("second");
           }}
         >
           일식
         </Thirdbox>
         <Thirdbox
+          className={`china ${isClicked === "third" && "clicked"}`}
           onClick={() => {
-            filterFood("china");
+            // filterFood("china");
+            setIsClicked("third");
           }}
         >
           중식
@@ -48,7 +54,7 @@ const ThirdRound = ({ setStep, setFoodArray, isSelected, setIsSelected }) => {
           onClick={() => {
             setStep("fourth");
           }}
-          disabled={!isSelected}
+          //   disabled={!isSelected}
         >
           다음으로
         </NextBtn>
@@ -110,6 +116,11 @@ const Thirdbox = styled.div`
   cursor: pointer;
   &:hover {
     border-color: black;
+  }
+  &.clicked {
+    background-color: black;
+    color: white;
+    border: none;
   }
 `;
 

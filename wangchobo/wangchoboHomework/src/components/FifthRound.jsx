@@ -1,13 +1,27 @@
 import styled from "styled-components";
 
-const FifthRound = ({ setStep }) => {
+const FifthRound = ({ setStep, isClicked, setIsClicked }) => {
   return (
     <PageWrapper>
       <TitleWrapper>마지막으로 골라봐!</TitleWrapper>
       <H4>3 / 3</H4>
       <MoodWrapper>
-        <Fifthbox>국물 X</Fifthbox>
-        <Fifthbox>국물 O</Fifthbox>
+        <Fifthbox
+          className={`nonesoup ${isClicked === "first" && "clicked"}`}
+          onClick={() => {
+            setIsClicked("first");
+          }}
+        >
+          국물 X
+        </Fifthbox>
+        <Fifthbox
+          className={`soup ${isClicked === "second" && "clicked"}`}
+          onClick={() => {
+            setIsClicked("second");
+          }}
+        >
+          국물 O
+        </Fifthbox>
       </MoodWrapper>
       <BtnWrapper>
         <PrevBtn
@@ -81,6 +95,11 @@ const Fifthbox = styled.div`
   border-radius: 1rem;
   &:hover {
     border-color: black;
+  }
+  &.clicked {
+    background-color: black;
+    color: white;
+    border: none;
   }
 `;
 
