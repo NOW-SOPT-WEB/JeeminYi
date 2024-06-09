@@ -9,7 +9,7 @@ import FifthRound from "./FifthRound";
 import SixthRound from "./SixthRound";
 import RandomResult from "./RandomResult";
 
-export const MainWrapper = ({ onClickStartBtn, step, setStep }) => {
+export const MainWrapper = ({ step, setStep }) => {
   //음식 데이터 filter 관리
   const [foodArray, setFoodArray] = useState([]);
   //Next 버튼 비활성화 (선택 여부 확인)
@@ -17,9 +17,7 @@ export const MainWrapper = ({ onClickStartBtn, step, setStep }) => {
   return (
     <PageWrapper>
       <BoxWrapper>
-        {step === "first" && (
-          <FirstRound onClickStartBtn={onClickStartBtn} setStep={setStep} />
-        )}
+        {step === "first" && <FirstRound setStep={setStep} />}
         {step === "secondOne" && <SecondRoundRecomm setStep={setStep} />}
         {step === "secondTwo" && <SecondRoundRandom setStep={setStep} />}
         {step === "third" && (

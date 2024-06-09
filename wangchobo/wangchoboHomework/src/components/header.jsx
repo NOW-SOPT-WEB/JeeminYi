@@ -1,10 +1,10 @@
 import styled from "styled-components";
 
-export const DefaultHeader = ({ isBtnClick, setStep }) => {
+export const DefaultHeader = ({ step, setStep }) => {
   return (
     <HeaderWrapper>
       <HeaderTitle>🎧 음~ 나 오늘 뭐 먹지? 🎧</HeaderTitle>
-      {isBtnClick && (
+      {step !== "first" && (
         <HeaderBtn
           onClick={() => {
             setStep("first");

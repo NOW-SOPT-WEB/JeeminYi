@@ -7,12 +7,14 @@ const ThirdRound = ({ setStep, setFoodArray, isSelected, setIsSelected }) => {
     setFoodArray(filterFoodArray);
     setIsSelected(true);
   };
+
   return (
     <PageWrapper>
       <TitleWrapper>오늘의 무드는 뭐야?</TitleWrapper>
       <H4>1 / 3</H4>
       <MoodWrapper>
         <Thirdbox
+          id="korea"
           onClick={() => {
             filterFood("korea");
           }}

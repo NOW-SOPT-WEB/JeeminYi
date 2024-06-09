@@ -1,13 +1,12 @@
 import styled from "styled-components";
 
-export const FirstRound = ({ onClickStartBtn, setStep }) => {
+export const FirstRound = ({ setStep }) => {
   return (
     <PageWrapper>
       <TitleWrapper>원하는 추천 방식을 골라봐~</TitleWrapper>
       <Wrapper>
         <RecommWrapper
           onClick={() => {
-            onClickStartBtn();
             setStep("secondOne");
           }}
         >
@@ -17,7 +16,6 @@ export const FirstRound = ({ onClickStartBtn, setStep }) => {
         </RecommWrapper>
         <RecommWrapper
           onClick={() => {
-            onClickStartBtn();
             setStep("secondTwo");
           }}
         >
