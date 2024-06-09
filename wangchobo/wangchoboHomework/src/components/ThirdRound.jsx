@@ -51,10 +51,15 @@ const ThirdRound = ({ setStep, isClicked, setIsClicked }) => {
           이전으로
         </PrevBtn>
         <NextBtn
+          className={`nextbutton ${
+            (isClicked === "first" ||
+              isClicked === "second" ||
+              isClicked === "third") &&
+            "abled"
+          }`}
           onClick={() => {
             setStep("fourth");
           }}
-          //   disabled={!isSelected}
         >
           다음으로
         </NextBtn>
@@ -155,5 +160,9 @@ const NextBtn = styled.button`
   &:hover {
     border-color: black;
     border: 1px solid;
+  }
+  &.abled {
+    background-color: #ffd438;
+    color: black;
   }
 `;

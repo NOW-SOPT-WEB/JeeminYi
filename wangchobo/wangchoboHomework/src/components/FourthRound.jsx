@@ -41,6 +41,12 @@ const FourthRound = ({ setStep, isClicked, setIsClicked }) => {
           이전으로
         </PrevBtn>
         <NextBtn
+          className={`nextbutton ${
+            (isClicked === "first" ||
+              isClicked === "second" ||
+              isClicked === "third") &&
+            "abled"
+          }`}
           onClick={() => {
             setStep("fifth");
           }}
@@ -143,5 +149,9 @@ const NextBtn = styled.button`
   &:hover {
     border-color: black;
     border: 1px solid;
+  }
+  &.abled {
+    background-color: #ffd438;
+    color: black;
   }
 `;
