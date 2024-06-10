@@ -7,17 +7,17 @@ const FifthRound = ({ setStep, isClicked, setIsClicked }) => {
       <H4>3 / 3</H4>
       <MoodWrapper>
         <Fifthbox
-          className={`nonesoup ${isClicked === "first" && "clicked"}`}
+          className={`nonesoup ${isClicked === "nonesoup" && "clicked"}`}
           onClick={() => {
-            setIsClicked("first");
+            setIsClicked("nonesoup");
           }}
         >
           국물 X
         </Fifthbox>
         <Fifthbox
-          className={`soup ${isClicked === "second" && "clicked"}`}
+          className={`soup ${isClicked === "soup" && "clicked"}`}
           onClick={() => {
-            setIsClicked("second");
+            setIsClicked("soup");
           }}
         >
           국물 O
@@ -33,7 +33,7 @@ const FifthRound = ({ setStep, isClicked, setIsClicked }) => {
         </PrevBtn>
         <NextBtn
           className={`nextbutton ${
-            (isClicked === "first" || isClicked === "second") && "abled"
+            (isClicked === "nonesoup" || isClicked === "soup") && "abled"
           }`}
           onClick={() => {
             setStep("sixth");

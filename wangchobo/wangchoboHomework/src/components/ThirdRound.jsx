@@ -15,28 +15,28 @@ const ThirdRound = ({ setStep, isClicked, setIsClicked }) => {
       <H4>1 / 3</H4>
       <MoodWrapper>
         <Thirdbox
-          className={`korea ${isClicked === "first" && "clicked"}`}
+          className={`korea ${isClicked === "korea" && "clicked"}`}
           onClick={() => {
             // filterFood("korea");
-            setIsClicked("first");
+            setIsClicked("korea");
           }}
         >
           한식
         </Thirdbox>
         <Thirdbox
-          className={`japan ${isClicked === "second" && "clicked"}`}
+          className={`japan ${isClicked === "japan" && "clicked"}`}
           onClick={() => {
             // filterFood("japan");
-            setIsClicked("second");
+            setIsClicked("japan");
           }}
         >
           일식
         </Thirdbox>
         <Thirdbox
-          className={`china ${isClicked === "third" && "clicked"}`}
+          className={`china ${isClicked === "china" && "clicked"}`}
           onClick={() => {
             // filterFood("china");
-            setIsClicked("third");
+            setIsClicked("china");
           }}
         >
           중식
@@ -52,9 +52,9 @@ const ThirdRound = ({ setStep, isClicked, setIsClicked }) => {
         </PrevBtn>
         <NextBtn
           className={`nextbutton ${
-            (isClicked === "first" ||
-              isClicked === "second" ||
-              isClicked === "third") &&
+            (isClicked === "korea" ||
+              isClicked === "japan" ||
+              isClicked === "china") &&
             "abled"
           }`}
           onClick={() => {

@@ -7,26 +7,26 @@ const FourthRound = ({ setStep, isClicked, setIsClicked }) => {
       <H4>2 / 3</H4>
       <MoodWrapper>
         <Fourthbox
-          className={`rice ${isClicked === "first" && "clicked"}`}
+          className={`rice ${isClicked === "rice" && "clicked"}`}
           onClick={() => {
             // filterFood("korea");
-            setIsClicked("first");
+            setIsClicked("rice");
           }}
         >
           밥
         </Fourthbox>
         <Fourthbox
-          className={`noodle ${isClicked === "second" && "clicked"}`}
+          className={`noodle ${isClicked === "noodle" && "clicked"}`}
           onClick={() => {
-            setIsClicked("second");
+            setIsClicked("noodle");
           }}
         >
           면
         </Fourthbox>
         <Fourthbox
-          className={`meat ${isClicked === "third" && "clicked"}`}
+          className={`meat ${isClicked === "meat" && "clicked"}`}
           onClick={() => {
-            setIsClicked("third");
+            setIsClicked("meat");
           }}
         >
           고기/해물
@@ -42,9 +42,9 @@ const FourthRound = ({ setStep, isClicked, setIsClicked }) => {
         </PrevBtn>
         <NextBtn
           className={`nextbutton ${
-            (isClicked === "first" ||
-              isClicked === "second" ||
-              isClicked === "third") &&
+            (isClicked === "rice" ||
+              isClicked === "noodle" ||
+              isClicked === "meat") &&
             "abled"
           }`}
           onClick={() => {
