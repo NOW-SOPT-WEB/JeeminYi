@@ -50,6 +50,11 @@ const FourthRound = ({ setStep, isClicked, setIsClicked }) => {
           onClick={() => {
             setStep("fifth");
           }}
+          disabled={
+            isClicked !== "rice" &&
+            isClicked !== "noodle" &&
+            isClicked !== "meat"
+          }
         >
           다음으로
         </NextBtn>

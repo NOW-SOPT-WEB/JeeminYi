@@ -5,7 +5,6 @@ const ThirdRound = ({ setStep, isClicked, setIsClicked }) => {
   //   const filterFood = (nation) => {
   //     const filterFoodArray = FoodData.filter((value) => value.includes(nation));
   //     setFoodArray(filterFoodArray);
-  //     setIsSelected(true);
   //   };
   //setStep, setFoodArray, isSelected, setIsSelected
 
@@ -60,6 +59,11 @@ const ThirdRound = ({ setStep, isClicked, setIsClicked }) => {
           onClick={() => {
             setStep("fourth");
           }}
+          disabled={
+            isClicked !== "korea" &&
+            isClicked !== "japan" &&
+            isClicked !== "china"
+          }
         >
           다음으로
         </NextBtn>

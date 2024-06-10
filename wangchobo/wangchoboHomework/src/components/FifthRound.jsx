@@ -38,6 +38,7 @@ const FifthRound = ({ setStep, isClicked, setIsClicked }) => {
           onClick={() => {
             setStep("sixth");
           }}
+          disabled={isClicked !== "nonesoup" && isClicked !== "soup"}
         >
           결과보기
         </NextBtn>

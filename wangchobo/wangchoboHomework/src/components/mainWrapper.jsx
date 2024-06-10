@@ -15,7 +15,7 @@ export const MainWrapper = ({ step, setStep }) => {
   //Next 버튼 비활성화 (선택 여부 확인)
   const [isSelected, setIsSelected] = useState(false);
   // 음식 선택 시 스타일 적용
-  const [isClicked, setIsClicked] = useState("");
+  const [isClicked, setIsClicked] = useState(null);
   return (
     <PageWrapper>
       <BoxWrapper>
