@@ -43,17 +43,15 @@ const Join = () => {
         </InputSection>
         <InputSection>
           <InputText>비밀번호</InputText>
-          <InputWrapper>
-            <Input
-              placeholder="비밀번호를 입력해주세요"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-            />
-            <WarningText>
-              비밀번호는 8자 이상으로 숫자, 특수 문자, 영문이 포함되어야 합니다.
-            </WarningText>
-          </InputWrapper>
+          <Input
+            placeholder="비밀번호를 입력해주세요"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+          />
         </InputSection>
+        <WarningText>
+          비밀번호는 8자 이상으로 숫자, 특수 문자, 영문이 포함되어야 합니다.
+        </WarningText>
         <InputSection>
           <InputText>닉네임</InputText>
           <Input
@@ -64,15 +62,13 @@ const Join = () => {
         </InputSection>
         <InputSection>
           <InputText>전화번호</InputText>
-          <InputWrapper>
-            <Input
-              placeholder="전화번호를 입력해주세요"
-              value={userNum}
-              onChange={(e) => setUserNum(e.target.value)}
-            />
-            <WarningText>전화번호 형식은 010-0000-0000입니다.</WarningText>
-          </InputWrapper>
+          <Input
+            placeholder="전화번호를 입력해주세요"
+            value={userNum}
+            onChange={(e) => setUserNum(e.target.value)}
+          />
         </InputSection>
+        <WarningText>전화번호 형식은 010-0000-0000입니다.</WarningText>
         <BtnSection>
           <Btn onClick={() => navigate(-1)}>뒤로가기</Btn>
           <Btn onClick={submitForm}>가입하기</Btn>
@@ -85,7 +81,12 @@ const Join = () => {
 export default Join;
 
 const JoinPageWrapper = styled.div`
-  background-color: #fff4dc;
+  background-color: #fffbe9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
 `;
 
 const JoinBox = styled.div`
@@ -93,62 +94,69 @@ const JoinBox = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin-top: 15rem;
   background-color: white;
   border: 1px solid black;
   border-radius: 2rem;
   box-shadow: 1px 1px 20px lightgray;
-  width: 30rem;
-  height: 40rem;
+  width: 50rem;
+  height: 60rem;
+  gap: 2rem;
 `;
 
 const Title = styled.p`
-  font-size: 16px;
+  font-size: 25px;
   font-weight: 800;
   text-align: center;
+  margin-bottom: 5rem;
 `;
 
 const InputSection = styled.div`
   display: flex;
   justify-content: space-between;
+  width: 30rem;
+  height: 3rem;
+  align-items: center;
 `;
 
 const InputText = styled.p`
-  font-size: 12px;
-  font-weight: 600;
+  font-size: 15px;
+  font-weight: 500;
 `;
 
-const Input = styled.placeholder`
+const Input = styled.input`
   background-color: white;
   border: 1px solid black;
-  border-radius: 2rem;
-`;
-
-const InputWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
+  border-radius: 0.5rem;
+  height: 3rem;
+  width: 20rem;
+  padding-left: 0.5rem;
 `;
 
 const WarningText = styled.p`
-  font-size: 7px;
-  font-weight: 200;
-  color: gray;
+  font-size: 7.3px;
+  font-weight: 400;
+  color: blue;
+  width: 30rem;
+  padding-left: 10rem;
+  text-align: start;
 `;
 
 const BtnSection = styled.span`
   width: 20rem;
-  gap: 5rem;
+  gap: 3rem;
   display: flex;
+  margin-top: 8rem;
 `;
 
 const Btn = styled.button`
   width: 8rem;
-  height: 4rem;
-  border-radius: 1rem;
+  height: 3rem;
+  border-radius: 0.8rem;
   background-color: black;
   color: white;
   align-items: center;
   align-content: center;
-  font-size: 8px;
+  font-size: 12px;
   font-weight: 400;
 `;
