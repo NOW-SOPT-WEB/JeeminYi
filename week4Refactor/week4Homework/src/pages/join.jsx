@@ -2,6 +2,7 @@ import axios from "axios";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
+import { formatPhoneNumber } from "../utils/utils";
 
 const Join = () => {
   const [userId, setUserId] = useState("");
@@ -10,6 +11,11 @@ const Join = () => {
   const [userNum, setUserNum] = useState("");
 
   const navigate = useNavigate();
+
+  const handleChangePhoneNumber = (e) => {
+    const formattedNumber = formatPhoneNumber(e.target.value);
+    setUserNum(formattedNumber);
+  };
 
   const submitForm = async () => {
     try {
@@ -66,7 +72,7 @@ const Join = () => {
           <Input
             placeholder="전화번호를 입력해주세요"
             value={userNum}
-            onChange={(e) => setUserNum(e.target.value)}
+            onChange={handleChangePhoneNumber}
           />
         </InputSection>
         <WarningText>전화번호 형식은 010-0000-0000입니다.</WarningText>
@@ -132,6 +138,10 @@ const Input = styled.input`
   height: 3rem;
   width: 20rem;
   padding-left: 0.5rem;
+  &.error {
+    border: 1px solid;
+    border-color: red;
+  }
 `;
 
 const WarningText = styled.p`

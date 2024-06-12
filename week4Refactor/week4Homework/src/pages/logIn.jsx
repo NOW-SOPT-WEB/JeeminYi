@@ -21,11 +21,11 @@ const LogIn = () => {
       );
 
       const memberId = postData.headers.location;
-      navigate(`My/${memberId}`);
-      console.log(postData);
+      localStorage.setItem("memberId", memberId);
+      navigate(`/My/${memberId}`);
       alert("로그인 완룡!");
-      navigate("/Home");
     } catch (error) {
+      alert("로그인에 실패하셨습니다랍쥐");
       console.log(error);
     }
   };

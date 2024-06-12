@@ -10,25 +10,29 @@ const My = () => {
   //memberId를 useParams로 받아오기
   const { memberId } = useParams();
   //member 정보 관리하는 state
-  const [memberInfo, setMemberInfo] = useState("");
-  const { authenticationId, nickname, phone } = memberInfo.data.data;
+  const [memberInfo, setMemberInfo] = useState({
+    authenticationId: "",
+    nickname: "",
+    phone: "",
+  });
+  const { authenticationId, nickname, phone } = memberInfo;
   //비밀번호 토글 오픈 여부
   const [isOpenChangePw, setIsOpenChangePw] = useState(false);
   //비밀번호 input 관리
-  const [prevPassword, setPrevPassword] = useState("");
+  const [previousPassword, setPreviousPassword] = useState("");
   const [newPassword, setNewPassword] = useState("");
-  const [newPasswordVerify, setNewPasswordVerify] = useState("");
+  const [newPasswordVerification, setNewPasswordVerification] = useState("");
   //비밀번호 변경 함수
-  const handleChangePrevPassword = (e) => {
-    setPrevPassword(e.target.value);
+  const handleChangepreviousPassword = (e) => {
+    setPreviousPassword(e.target.value);
   };
   // 새 비밀번호 input 변경
   const handleChangeNewPassword = (e) => {
     setNewPassword(e.target.value);
   };
   // 새 비밀번호 확인 input 변경
-  const handleChangeNewPasswordVerify = (e) => {
-    setNewPasswordVerify(e.target.value);
+  const handleChangenewPasswordVerification = (e) => {
+    setNewPasswordVerification(e.target.value);
   };
   // 비밀번호 변경 모달 토글
   const handleClickToggle = () => {
@@ -36,7 +40,7 @@ const My = () => {
   };
   //비밀번호 변경 버튼 클릭
   const handleClickChangePassword = async () => {
-    if (!prevPassword || !newPassword || !newPasswordVerify) {
+    if (!previousPassword || !newPassword || !newPasswordVerification) {
       alert("모든 항목을 입력해주세요!");
       return;
     }
@@ -44,6 +48,23 @@ const My = () => {
     if (!validatePassword(newPassword)) {
       alert("비밀번호가 일치하지 않습니다🥲");
       return;
+    }
+    try {
+      const response = await axios.patch(
+        `${import.meta.env.VITE_APP_BASE_URL}/member/password`,
+        {
+          previousPassword: previousPassword,
+          newPassword: newPassword,
+          newPasswordVerification: newPasswordVerification,
+        },
+        {
+          headers: { memberId },
+        }
+      );
+      console.log(response);
+      alert("비밀번호 변경이 완료되었습니다.");
+    } catch (error) {
+      alert(error.response?.data.message);
     }
   };
 
@@ -56,7 +77,7 @@ const My = () => {
         );
         console.log(memberInfoData);
 
-        setMemberInfo(memberInfoData);
+        setMemberInfo(memberInfoData.data.data);
         console.log({ memberInfo });
       } catch (error) {
         console.error(error);
@@ -64,30 +85,6 @@ const My = () => {
     };
     fetchData();
   }, [memberId]);
-
-  //   const handleSubmit = async () => {
-  //     try {
-  //       if (!prevPassword || !newPassword || !newPasswordVerify) {
-  //         alert("모든 정보를 입력해주세요!");
-  //         return;
-  //       }
-  //       const response = await axios.patch(
-  //         `${import.meta.env.VITE_APP_BASE_URL}/member/password`,
-  //         {
-  //           prevPassword: prevPassword,
-  //           newPassword: newPassword,
-  //           newPasswordVerify: newPasswordVerify,
-  //         },
-  //         {
-  //           headers: { memberId },
-  //         }
-  //       );
-  //       console.log(response);
-  //       alert("비밀번호 변경이 완료되었습니다.");
-  //     } catch (error) {
-  //       alert(error.response?.data.message);
-  //     }
-  //   };
 
   return (
     <MyPageWrapper>
@@ -114,8 +111,8 @@ const My = () => {
             <ChangeInputSection>
               <Input
                 placeholder="기존 비밀번호"
-                value={prevPassword}
-                onChange={handleChangePrevPassword}
+                value={previousPassword}
+                onChange={handleChangepreviousPassword}
               />
               <Input
                 placeholder="새로운 비밀번호"
@@ -124,8 +121,8 @@ const My = () => {
               />
               <Input
                 placeholder="새로운 비밀번호 확인"
-                value={newPasswordVerify}
-                onChange={handleChangeNewPasswordVerify}
+                value={newPasswordVerification}
+                onChange={handleChangenewPasswordVerification}
               />
               <Btn onClick={handleClickChangePassword}>비밀번호 변경</Btn>
             </ChangeInputSection>
@@ -195,6 +192,9 @@ const ChangeSection = styled.div`
 `;
 
 const ChangeInputSection = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   gap: 2rem;
 `;
 

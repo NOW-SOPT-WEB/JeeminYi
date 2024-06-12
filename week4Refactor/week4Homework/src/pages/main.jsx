@@ -1,15 +1,24 @@
 import styled from "styled-components";
-import Jeemin from "../assets/Jeemin.svg";
+import Video from "../assets/week4Video.mp4";
 import { useNavigate } from "react-router-dom";
+import { useEffect, useState } from "react";
 
 const Main = () => {
   const navigate = useNavigate();
+  const [memberId, setMemberId] = useState("");
+
+  useEffect(() => {
+    const storedMemberId = localStorage.getItem("memberId");
+    if (storedMemberId) {
+      setMemberId(storedMemberId);
+    }
+  }, []);
   return (
     <MainPageWrapper>
-      <HeaderSection>축하합니달라~💸</HeaderSection>
-      <Img src={Jeemin} />
+      <HeaderSection>팟짱님 생일 축하합니달라~💸</HeaderSection>
+      <video src={Video} controls autoPlay height="500rem"></video>
       <BtnSection>
-        <Btn onClick={() => navigate("/My/:memberId")}>내 정보</Btn>
+        <Btn onClick={() => navigate(`/My/${memberId}`)}>내 정보</Btn>
         <Btn onClick={() => navigate("/Join")}>회원가입</Btn>
       </BtnSection>
     </MainPageWrapper>
@@ -42,10 +51,10 @@ const HeaderSection = styled.header`
   z-index: 2;
 `;
 
-const Img = styled.img`
-  width: 30rem;
-  margin-bottom: 3.5rem;
-`;
+// const Img = styled.img`
+//   width: 30rem;
+//   margin-bottom: 3.5rem;
+// `;
 
 const BtnSection = styled.span`
   width: 20rem;
