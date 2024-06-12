@@ -13,7 +13,7 @@ const Join = () => {
 
   const submitForm = async () => {
     try {
-      const postData = await axios.post(
+      const postJoinData = await axios.post(
         `${import.meta.env.VITE_APP_BASE_URL}/member/join`,
         {
           authenticationId: userId,
@@ -22,10 +22,11 @@ const Join = () => {
           phone: userNum,
         }
       );
-      console.log(postData);
+      console.log(postJoinData);
       alert("회원가입 완룡!");
       navigate("/LogIn");
     } catch (error) {
+      alert(error.response?.data.message);
       console.error("회원가입 실패");
     }
   };

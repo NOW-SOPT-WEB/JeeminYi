@@ -19,6 +19,9 @@ const LogIn = () => {
           password: password,
         }
       );
+
+      const memberId = postData.headers.location;
+      navigate(`My/${memberId}`);
       console.log(postData);
       alert("로그인 완룡!");
       navigate("/Home");
@@ -34,16 +37,11 @@ const LogIn = () => {
         <Img src={Jeemin} />
         <InputSection>
           <InputText>ID</InputText>
-          <Input
-            placeholder="ID를 입력해주세요"
-            value={userId}
-            onChange={(e) => setUserId(e.target.value)}
-          />
+          <Input value={userId} onChange={(e) => setUserId(e.target.value)} />
         </InputSection>
         <InputSection>
           <InputText>비밀번호</InputText>
           <Input
-            placeholder="비밀번호를 입력해주세요"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           />

@@ -9,7 +9,7 @@ const Main = () => {
       <HeaderSection>축하합니달라~💸</HeaderSection>
       <Img src={Jeemin} />
       <BtnSection>
-        <Btn onClick={() => navigate("/My")}>내 정보</Btn>
+        <Btn onClick={() => navigate("/My/:memberId")}>내 정보</Btn>
         <Btn onClick={() => navigate("/Join")}>회원가입</Btn>
       </BtnSection>
     </MainPageWrapper>
