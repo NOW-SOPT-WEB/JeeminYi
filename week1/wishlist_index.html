@@ -1,291 +1,454 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>지민이의 위시리스트</title>
-    <link rel="stylesheet" href="wishlist_style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="wishlist_style.css" />
+  </head>
+  <body>
     <header class="header">
-        <img src="img\icon\logo.png" alt="로고 이미지">
-        <h1>지민이의 위시리스트</h1>
-        <img src="img\icon\menu.png" alt="메뉴 이미지">
+      <img src="img\icon\logo.png" alt="로고 이미지" />
+      <h1>지민이의 위시리스트</h1>
+      <img src="img\icon\menu.png" alt="메뉴 이미지" />
     </header>
     <div class="main-area">
-        <nav class="nav">
-            <h2>위시 목록</h2>
-            <ul>
-                <li><a href="#section-all">전체</a></li>
-                <li><a href="#section-cool">멋있는거</a></li>
-                <li><a href="#section-cute">귀여운거</a></li>
-                <li><a href="#section-trash">쓸데없는거</a></li>
+      <nav class="nav">
+        <h2>위시 목록</h2>
+        <ul>
+          <li><a href="#section-all">전체</a></li>
+          <li><a href="#section-cool">멋있는거</a></li>
+          <li><a href="#section-cute">귀여운거</a></li>
+          <li><a href="#section-trash">쓸데없는거</a></li>
+        </ul>
+      </nav>
+      <section class="image-area">
+        <article class="banner">
+          <div class="slide">
+            <ul class="slide-list">
+              <li>
+                <img
+                  class="slide-img"
+                  src="img\cool\cool1.png"
+                  alt="배너 이미지"
+                />
+              </li>
+              <li>
+                <img
+                  class="slide-img"
+                  src="img\cool\cool2.png"
+                  alt="배너 이미지"
+                />
+              </li>
+              <li>
+                <img
+                  class="slide-img"
+                  src="img\cool\cool3.png"
+                  alt="배너 이미지"
+                />
+              </li>
+              <li>
+                <img
+                  class="slide-img"
+                  src="img\cool\cool4.png"
+                  alt="배너 이미지"
+                />
+              </li>
+              <li>
+                <img
+                  class="slide-img"
+                  src="img\cute\cute1.png"
+                  alt="배너 이미지"
+                />
+              </li>
+              <li>
+                <img
+                  class="slide-img"
+                  src="img\cute\cute2.png"
+                  alt="배너 이미지"
+                />
+              </li>
+              <li>
+                <img
+                  class="slide-img"
+                  src="img\cute\cute3.png"
+                  alt="배너 이미지"
+                />
+              </li>
+              <li>
+                <img
+                  class="slide-img"
+                  src="img\cute\cute4.png"
+                  alt="배너 이미지"
+                />
+              </li>
+              <li>
+                <img
+                  class="slide-img"
+                  src="img\trash\trash1.png"
+                  alt="배너 이미지"
+                />
+              </li>
+              <li>
+                <img
+                  class="slide-img"
+                  src="img\trash\trash2.png"
+                  alt="배너 이미지"
+                />
+              </li>
+              <li>
+                <img
+                  class="slide-img"
+                  src="img\trash\trash3.png"
+                  alt="배너 이미지"
+                />
+              </li>
+              <li>
+                <img
+                  class="slide-img"
+                  src="img\trash\trash4.png"
+                  alt="배너 이미지"
+                />
+              </li>
             </ul>
-        </nav>
-        <section class="image-area">
-            <article class="banner">
-                <div class="slide">
-                    <img class="slide-img" src="img\cool\cool1.png" alt="배너 이미지">
-                    <img class="slide-img" src="img\cool\cool2.png" alt="배너 이미지">
-                    <img class="slide-img" src="img\cool\cool3.png" alt="배너 이미지">
-                    <img class="slide-img" src="img\cool\cool4.png" alt="배너 이미지">
-                    <img class="slide-img" src="img\cute\cute1.png" alt="배너 이미지">
-                    <img class="slide-img" src="img\cute\cute2.png" alt="배너 이미지">
-                    <img class="slide-img" src="img\cute\cute3.png" alt="배너 이미지">
-                    <img class="slide-img" src="img\cute\cute4.png" alt="배너 이미지">
-                    <img class="slide-img" src="img\trash\trash1.png" alt="배너 이미지">
-                    <img class="slide-img" src="img\trash\trash2.png" alt="배너 이미지">
-                    <img class="slide-img" src="img\trash\trash3.png" alt="배너 이미지">
-                    <img class="slide-img" src="img\trash\trash4.png" alt="배너 이미지">
-                </div>
-            </article>
-            <article class="wishlist">
-                <div class="section-all" id="section-all">
-                    <h1>전체</h1>
-                    <div class="all-img">
-                        <div>
-                            <img src="img\cool\cool1.png" alt="멋있는거 이미지">
-                            <p class="wish_btn">♥</p>
-                            <p class="item_name">캐멋진 살로몬</p>
-                            <p class="item_price">234,000원</p>
-                        </div>
-                        <div>
-                            <img src="img\cool\cool2.png" alt="멋있는거 이미지">
-                            <p class="wish_btn">♥</p>
-                            <p class="item_name">짱멋진 눕시</p>
-                            <p class="item_price">345,938원</p>
-                        </div>
-                        <div>
-                            <img src="img\cool\cool3.png" alt="멋있는거 이미지"> 
-                            <p class="wish_btn">♥</p>
-                            <p class="item_name">사고싶어 맥스</p>
-                            <p class="item_price">768,049원</p>
-                        </div>
-                        <div>
-                            <img src="img\cool\cool4.png" alt="멋있는거 이미지">
-                            <p class="wish_btn">♥</p>
-                            <p class="item_name">사주세요 칼하트</p>
-                            <p class="item_price">78,000원</p>
-                        </div>
-                        <div>
-                            <img src="img\cool\cool5.png" alt="멋있는거 이미지">
-                            <p class="wish_btn">♥</p>
-                            <p class="item_name">내게와 lp</p>
-                            <p class="item_price">188,000원</p>
-                        </div>
-                        <div>
-                            <img src="img\cool\cool6.png" alt="멋있는거 이미지">
-                            <p class="wish_btn">♥</p>
-                            <p class="item_name">내꺼예요 된장포스</p>
-                            <p class="item_price">208,000원</p>
-                        </div>
-                        <div>
-                            <img src="img\cool\cool7.png" alt="멋있는거 이미지">
-                            <p class="wish_btn">♥</p>
-                            <p class="item_name">샀어요 스투시</p>
-                            <p class="item_price">100,000원</p>
-                        </div>
-                        <div>
-                            <img src="img\cute\cute1.png" alt="귀여운거 이미지">
-                            <p class="wish_btn">♥</p>
-                            <p class="item_name">내놔 식기 세트</p>
-                            <p class="item_price">24,800원</p>
-                        </div>
-                        <div>
-                            <img src="img\cute\cute2.png" alt="귀여운거 이미지">
-                            <p class="wish_btn">♥</p>
-                            <p class="item_name">그로밋 머그컵</p>
-                            <p class="item_price">25,000원</p>
-                        </div>
-                        <div>
-                            <img src="img\cute\cute3.png" alt="귀여운거 이미지">
-                            <p class="wish_btn">♥</p>
-                            <p class="item_name">귀엽지요? 앵브록스</p>
-                            <p class="item_price">35,000원</p>
-                        </div>
-                        <div>
-                            <img src="img\cute\cute4.png" alt="귀여운거 이미지">
-                            <p class="wish_btn">♥</p>
-                            <p class="item_name">이우가마카라스</p>
-                            <p class="item_price">188,000원</p>
-                        </div>
-                        <div>
-                            <img src="img\cute\cute5.png" alt="귀여운거 이미지">
-                            <p class="wish_btn">♥</p>
-                            <p class="item_name">사실 그냥 그런 접시</p>
-                            <p class="item_price">25,000원</p>
-                        </div>
-                        <div>
-                            <img src="img\cute\cute6.png" alt="귀여운거 이미지">
-                            <p class="wish_btn">♥</p>
-                            <p class="item_name">깜찍해 keen</p>
-                            <p class="item_price">136,000원</p>
-                        </div>
-                        <div>
-                            <img src="img\cute\cute7.png" alt="귀여운거 이미지">
-                            <p class="wish_btn">♥</p>
-                            <p class="item_name">디지털 카메라</p>
-                            <p class="item_price">225,000원</p>
-                        </div>
-                        <div>
-                            <img src="img\trash\trash1.png" alt="쓸데없는거 이미지">
-                            <p class="wish_btn">♥</p>
-                            <p class="item_name">사주나? 쏜희 키링</p>
-                            <p class="item_price">측정 불가</p>
-                        </div>
-                        <div>
-                            <img src="img\trash\trash2.png" alt="쓸데없는거 이미지">
-                            <p class="wish_btn">♥</p>
-                            <p class="item_name">바르셀로나 14-15</p>
-                            <p class="item_price">얼마였더라</p>
-                        </div>
-                        <div>
-                            <img src="img\trash\trash3.png" alt="쓸데없는거 이미지">
-                            <p class="wish_btn">♥</p>
-                            <p class="item_name">간절한 유럽행 티켓</p>
-                            <p class="item_price">대략 오천만원</p>
-                        </div>
-                        <div>
-                            <img src="img\trash\trash4.png" alt="쓸데없는거 이미지">
-                            <p class="wish_btn">♥</p>
-                            <p class="item_name">나도 이펙터</p>
-                            <p class="item_price">어림잡아 30만원</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="section-cool" id="section-cool">
-                    <h1>멋있는거</h1>
-                    <div class="cool-img">
-                        <div>
-                            <img src="img\cool\cool1.png" alt="멋있는거 이미지">
-                            <p class="wish_btn">♥</p>
-                            <p class="item_name">캐멋진 살로몬</p>
-                            <p class="item_price">234,000원</p>
-                        </div>
-                        <div>
-                            <img src="img\cool\cool2.png" alt="멋있는거 이미지">
-                            <p class="wish_btn">♥</p>
-                            <p class="item_name">짱멋진 눕시</p>
-                            <p class="item_price">345,938원</p>
-                        </div>
-                        <div>
-                            <img src="img\cool\cool3.png" alt="멋있는거 이미지"> 
-                            <p class="wish_btn">♥</p>
-                            <p class="item_name">사고싶어 맥스</p>
-                            <p class="item_price">768,049원</p>
-                        </div>
-                        <div>
-                            <img src="img\cool\cool4.png" alt="멋있는거 이미지">
-                            <p class="wish_btn">♥</p>
-                            <p class="item_name">사주세요 칼하트</p>
-                            <p class="item_price">78,000원</p>
-                        </div>
-                        <div>
-                            <img src="img\cool\cool5.png" alt="멋있는거 이미지">
-                            <p class="wish_btn">♥</p>
-                            <p class="item_name">내게와 lp</p>
-                            <p class="item_price">188,000원</p>
-                        </div>
-                        <div>
-                            <img src="img\cool\cool6.png" alt="멋있는거 이미지">
-                            <p class="wish_btn">♥</p>
-                            <p class="item_name">내꺼예요 된장포스</p>
-                            <p class="item_price">208,000원</p>
-                        </div>
-                        <div>
-                            <img src="img\cool\cool7.png" alt="멋있는거 이미지">
-                            <p class="wish_btn">♥</p>
-                            <p class="item_name">샀어요 스투시</p>
-                            <p class="item_price">100,000원</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="section-cute" id="section-cute">
-                    <h1>귀여운거</h1>
-                    <div class="cute-img">
-                        <div>
-                            <img src="img\cute\cute1.png" alt="귀여운거 이미지">
-                            <p class="wish_btn">♥</p>
-                            <p class="item_name">내놔 식기 세트</p>
-                            <p class="item_price">24,800원</p>
-                        </div>
-                        <div>
-                            <img src="img\cute\cute2.png" alt="귀여운거 이미지">
-                            <p class="wish_btn">♥</p>
-                            <p class="item_name">그로밋 머그컵</p>
-                            <p class="item_price">25,000원</p>
-                        </div>
-                        <div>
-                            <img src="img\cute\cute3.png" alt="귀여운거 이미지">
-                            <p class="wish_btn">♥</p>
-                            <p class="item_name">귀엽지요? 앵브록스</p>
-                            <p class="item_price">35,000원</p>
-                        </div>
-                        <div>
-                            <img src="img\cute\cute4.png" alt="귀여운거 이미지">
-                            <p class="wish_btn">♥</p>
-                            <p class="item_name">이우가마카라스</p>
-                            <p class="item_price">188,000원</p>
-                        </div>
-                        <div>
-                            <img src="img\cute\cute5.png" alt="귀여운거 이미지">
-                            <p class="wish_btn">♥</p>
-                            <p class="item_name">사실 그냥 그런 접시</p>
-                            <p class="item_price">25,000원</p>
-                        </div>
-                        <div>
-                            <img src="img\cute\cute6.png" alt="귀여운거 이미지">
-                            <p class="wish_btn">♥</p>
-                            <p class="item_name">깜찍해 keen</p>
-                            <p class="item_price">136,000원</p>
-                        </div>
-                        <div>
-                            <img src="img\cute\cute7.png" alt="귀여운거 이미지">
-                            <p class="wish_btn">♥</p>
-                            <p class="item_name">디지털 카메라</p>
-                            <p class="item_price">225,000원</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="section-trash" id="section-trash">
-                    <h1>쓸데없는거</h1>
-                    <div class="trash-img">
-                        <div>
-                            <img src="img\trash\trash1.png" alt="쓸데없는거 이미지">
-                            <p class="wish_btn">♥</p>
-                            <p class="item_name">사주나? 쏜희 키링</p>
-                            <p class="item_price">측정 불가</p>
-                        </div>
-                        <div>
-                            <img src="img\trash\trash2.png" alt="쓸데없는거 이미지">
-                            <p class="wish_btn">♥</p>
-                            <p class="item_name">바르셀로나 14-15</p>
-                            <p class="item_price">얼마였더라</p>
-                        </div>
-                        <div>
-                            <img src="img\trash\trash3.png" alt="쓸데없는거 이미지">
-                            <p class="wish_btn">♥</p>
-                            <p class="item_name">간절한 유럽행 티켓</p>
-                            <p class="item_price">대략 오천만원</p>
-                        </div>
-                        <div>
-                            <img src="img\trash\trash4.png" alt="쓸데없는거 이미지">
-                            <p class="wish_btn">♥</p>
-                            <p class="item_name">나도 이펙터</p>
-                            <p class="item_price">어림잡아 30만원</p>
-                        </div>
-                    </div>
-                </div>
-            </article>
-        </section>
+            <ul class="slide-list">
+              <li>
+                <img
+                  class="slide-img"
+                  src="img\cool\cool1.png"
+                  alt="배너 이미지"
+                />
+              </li>
+              <li>
+                <img
+                  class="slide-img"
+                  src="img\cool\cool2.png"
+                  alt="배너 이미지"
+                />
+              </li>
+              <li>
+                <img
+                  class="slide-img"
+                  src="img\cool\cool3.png"
+                  alt="배너 이미지"
+                />
+              </li>
+              <li>
+                <img
+                  class="slide-img"
+                  src="img\cool\cool4.png"
+                  alt="배너 이미지"
+                />
+              </li>
+              <li>
+                <img
+                  class="slide-img"
+                  src="img\cute\cute1.png"
+                  alt="배너 이미지"
+                />
+              </li>
+              <li>
+                <img
+                  class="slide-img"
+                  src="img\cute\cute2.png"
+                  alt="배너 이미지"
+                />
+              </li>
+              <li>
+                <img
+                  class="slide-img"
+                  src="img\cute\cute3.png"
+                  alt="배너 이미지"
+                />
+              </li>
+              <li>
+                <img
+                  class="slide-img"
+                  src="img\cute\cute4.png"
+                  alt="배너 이미지"
+                />
+              </li>
+              <li>
+                <img
+                  class="slide-img"
+                  src="img\trash\trash1.png"
+                  alt="배너 이미지"
+                />
+              </li>
+              <li>
+                <img
+                  class="slide-img"
+                  src="img\trash\trash2.png"
+                  alt="배너 이미지"
+                />
+              </li>
+              <li>
+                <img
+                  class="slide-img"
+                  src="img\trash\trash3.png"
+                  alt="배너 이미지"
+                />
+              </li>
+              <li>
+                <img
+                  class="slide-img"
+                  src="img\trash\trash4.png"
+                  alt="배너 이미지"
+                />
+              </li>
+            </ul>
+          </div>
+        </article>
+        <article class="wishlist">
+          <div class="section-all" id="section-all">
+            <h1>전체</h1>
+            <div class="all-img">
+              <div class="media_box">
+                <img src="img\cool\cool1.png" alt="멋있는거 이미지" />
+                <p class="wish_btn">♥</p>
+                <p class="item_name">캐멋진 살로몬</p>
+                <p class="item_price">234,000원</p>
+              </div>
+              <div class="media_box">
+                <img src="img\cool\cool2.png" alt="멋있는거 이미지" />
+                <p class="wish_btn">♥</p>
+                <p class="item_name">짱멋진 눕시</p>
+                <p class="item_price">345,938원</p>
+              </div>
+              <div class="media_box">
+                <img src="img\cool\cool3.png" alt="멋있는거 이미지" />
+                <p class="wish_btn">♥</p>
+                <p class="item_name">사고싶어 맥스</p>
+                <p class="item_price">768,049원</p>
+              </div>
+              <div class="media_box">
+                <img src="img\cool\cool4.png" alt="멋있는거 이미지" />
+                <p class="wish_btn">♥</p>
+                <p class="item_name">사주세요 칼하트</p>
+                <p class="item_price">78,000원</p>
+              </div>
+              <div class="media_box">
+                <img src="img\cool\cool5.png" alt="멋있는거 이미지" />
+                <p class="wish_btn">♥</p>
+                <p class="item_name">내게와 lp</p>
+                <p class="item_price">188,000원</p>
+              </div>
+              <div class="media_box">
+                <img src="img\cool\cool6.png" alt="멋있는거 이미지" />
+                <p class="wish_btn">♥</p>
+                <p class="item_name">내꺼예요 된장포스</p>
+                <p class="item_price">208,000원</p>
+              </div>
+              <div class="media_box">
+                <img src="img\cool\cool7.png" alt="멋있는거 이미지" />
+                <p class="wish_btn">♥</p>
+                <p class="item_name">샀어요 스투시</p>
+                <p class="item_price">100,000원</p>
+              </div>
+              <div class="media_box">
+                <img src="img\cute\cute1.png" alt="귀여운거 이미지" />
+                <p class="wish_btn">♥</p>
+                <p class="item_name">내놔 식기 세트</p>
+                <p class="item_price">24,800원</p>
+              </div>
+              <div class="media_box">
+                <img src="img\cute\cute2.png" alt="귀여운거 이미지" />
+                <p class="wish_btn">♥</p>
+                <p class="item_name">그로밋 머그컵</p>
+                <p class="item_price">25,000원</p>
+              </div>
+              <div class="media_box">
+                <img src="img\cute\cute3.png" alt="귀여운거 이미지" />
+                <p class="wish_btn">♥</p>
+                <p class="item_name">귀엽지요? 앵브록스</p>
+                <p class="item_price">35,000원</p>
+              </div>
+              <div class="media_box">
+                <img src="img\cute\cute4.png" alt="귀여운거 이미지" />
+                <p class="wish_btn">♥</p>
+                <p class="item_name">이우가마카라스</p>
+                <p class="item_price">188,000원</p>
+              </div>
+              <div class="media_box">
+                <img src="img\cute\cute5.png" alt="귀여운거 이미지" />
+                <p class="wish_btn">♥</p>
+                <p class="item_name">사실 그냥 그런 접시</p>
+                <p class="item_price">25,000원</p>
+              </div>
+              <div class="media_box">
+                <img src="img\cute\cute6.png" alt="귀여운거 이미지" />
+                <p class="wish_btn">♥</p>
+                <p class="item_name">깜찍해 keen</p>
+                <p class="item_price">136,000원</p>
+              </div>
+              <div class="media_box">
+                <img src="img\cute\cute7.png" alt="귀여운거 이미지" />
+                <p class="wish_btn">♥</p>
+                <p class="item_name">디지털 카메라</p>
+                <p class="item_price">225,000원</p>
+              </div>
+              <div class="media_box">
+                <img src="img\trash\trash1.png" alt="쓸데없는거 이미지" />
+                <p class="wish_btn">♥</p>
+                <p class="item_name">사주나? 쏜희 키링</p>
+                <p class="item_price">측정 불가</p>
+              </div>
+              <div class="media_box">
+                <img src="img\trash\trash2.png" alt="쓸데없는거 이미지" />
+                <p class="wish_btn">♥</p>
+                <p class="item_name">바르셀로나 14-15</p>
+                <p class="item_price">얼마였더라</p>
+              </div>
+              <div class="media_box">
+                <img src="img\trash\trash3.png" alt="쓸데없는거 이미지" />
+                <p class="wish_btn">♥</p>
+                <p class="item_name">간절한 유럽행 티켓</p>
+                <p class="item_price">대략 오천만원</p>
+              </div>
+              <div class="media_box">
+                <img src="img\trash\trash4.png" alt="쓸데없는거 이미지" />
+                <p class="wish_btn">♥</p>
+                <p class="item_name">나도 이펙터</p>
+                <p class="item_price">어림잡아 30만원</p>
+              </div>
+            </div>
+          </div>
+          <div class="section-cool" id="section-cool">
+            <h1>멋있는거</h1>
+            <div class="cool-img">
+              <div class="media_box">
+                <img src="img\cool\cool1.png" alt="멋있는거 이미지" />
+                <p class="wish_btn">♥</p>
+                <p class="item_name">캐멋진 살로몬</p>
+                <p class="item_price">234,000원</p>
+              </div>
+              <div class="media_box">
+                <img src="img\cool\cool2.png" alt="멋있는거 이미지" />
+                <p class="wish_btn">♥</p>
+                <p class="item_name">짱멋진 눕시</p>
+                <p class="item_price">345,938원</p>
+              </div>
+              <div class="media_box">
+                <img src="img\cool\cool3.png" alt="멋있는거 이미지" />
+                <p class="wish_btn">♥</p>
+                <p class="item_name">사고싶어 맥스</p>
+                <p class="item_price">768,049원</p>
+              </div>
+              <div class="media_box">
+                <img src="img\cool\cool4.png" alt="멋있는거 이미지" />
+                <p class="wish_btn">♥</p>
+                <p class="item_name">사주세요 칼하트</p>
+                <p class="item_price">78,000원</p>
+              </div>
+              <div class="media_box">
+                <img src="img\cool\cool5.png" alt="멋있는거 이미지" />
+                <p class="wish_btn">♥</p>
+                <p class="item_name">내게와 lp</p>
+                <p class="item_price">188,000원</p>
+              </div>
+              <div class="media_box">
+                <img src="img\cool\cool6.png" alt="멋있는거 이미지" />
+                <p class="wish_btn">♥</p>
+                <p class="item_name">내꺼예요 된장포스</p>
+                <p class="item_price">208,000원</p>
+              </div>
+              <div class="media_box">
+                <img src="img\cool\cool7.png" alt="멋있는거 이미지" />
+                <p class="wish_btn">♥</p>
+                <p class="item_name">샀어요 스투시</p>
+                <p class="item_price">100,000원</p>
+              </div>
+            </div>
+          </div>
+          <div class="section-cute" id="section-cute">
+            <h1>귀여운거</h1>
+            <div class="cute-img">
+              <div class="media_box">
+                <img src="img\cute\cute1.png" alt="귀여운거 이미지" />
+                <p class="wish_btn">♥</p>
+                <p class="item_name">내놔 식기 세트</p>
+                <p class="item_price">24,800원</p>
+              </div>
+              <div class="media_box">
+                <img src="img\cute\cute2.png" alt="귀여운거 이미지" />
+                <p class="wish_btn">♥</p>
+                <p class="item_name">그로밋 머그컵</p>
+                <p class="item_price">25,000원</p>
+              </div>
+              <div class="media_box">
+                <img src="img\cute\cute3.png" alt="귀여운거 이미지" />
+                <p class="wish_btn">♥</p>
+                <p class="item_name">귀엽지요? 앵브록스</p>
+                <p class="item_price">35,000원</p>
+              </div>
+              <div class="media_box">
+                <img src="img\cute\cute4.png" alt="귀여운거 이미지" />
+                <p class="wish_btn">♥</p>
+                <p class="item_name">이우가마카라스</p>
+                <p class="item_price">188,000원</p>
+              </div>
+              <div class="media_box">
+                <img src="img\cute\cute5.png" alt="귀여운거 이미지" />
+                <p class="wish_btn">♥</p>
+                <p class="item_name">사실 그냥 그런 접시</p>
+                <p class="item_price">25,000원</p>
+              </div>
+              <div class="media_box">
+                <img src="img\cute\cute6.png" alt="귀여운거 이미지" />
+                <p class="wish_btn">♥</p>
+                <p class="item_name">깜찍해 keen</p>
+                <p class="item_price">136,000원</p>
+              </div>
+              <div class="media_box">
+                <img src="img\cute\cute7.png" alt="귀여운거 이미지" />
+                <p class="wish_btn">♥</p>
+                <p class="item_name">디지털 카메라</p>
+                <p class="item_price">225,000원</p>
+              </div>
+            </div>
+          </div>
+          <div class="section-trash" id="section-trash">
+            <h1>쓸데없는거</h1>
+            <div class="trash-img">
+              <div class="media_box">
+                <img src="img\trash\trash1.png" alt="쓸데없는거 이미지" />
+                <p class="wish_btn">♥</p>
+                <p class="item_name">사주나? 쏜희 키링</p>
+                <p class="item_price">측정 불가</p>
+              </div>
+              <div class="media_box">
+                <img src="img\trash\trash2.png" alt="쓸데없는거 이미지" />
+                <p class="wish_btn">♥</p>
+                <p class="item_name">바르셀로나 14-15</p>
+                <p class="item_price">얼마였더라</p>
+              </div>
+              <div class="media_box">
+                <img src="img\trash\trash3.png" alt="쓸데없는거 이미지" />
+                <p class="wish_btn">♥</p>
+                <p class="item_name">간절한 유럽행 티켓</p>
+                <p class="item_price">대략 오천만원</p>
+              </div>
+              <div class="media_box">
+                <img src="img\trash\trash4.png" alt="쓸데없는거 이미지" />
+                <p class="wish_btn">♥</p>
+                <p class="item_name">나도 이펙터</p>
+                <p class="item_price">어림잡아 30만원</p>
+              </div>
+            </div>
+          </div>
+        </article>
+      </section>
     </div>
     <footer class="footer">
-        <h2>credit</h2>
-        <li>html 끄적인 사람 : 지민</li>
-        <li>css 만진 사람 : 지민</li>
-        <li>화내지않고 답답해하지 않고 질문 받아준 웨비들 : 유태승 이동헌 김가현 (iOS)</li>
-        <li>최고의 1주차 금잔디조 : 최주용 유태승 문성희</li>
-        <li>불철주야 함께 해준 파짱님: 이재훈</li>
+      <h2>credit</h2>
+      <li>html 끄적인 사람 : 지민</li>
+      <li>css 만진 사람 : 지민</li>
+      <li>
+        화내지않고 답답해하지 않고 질문 받아준 웨비들 : 유태승 이동헌 김가현
+        (iOS)
+      </li>
+      <li>최고의 1주차 금잔디조 : 최주용 유태승 문성희</li>
+      <li>불철주야 함께 해준 파짱님: 이재훈</li>
     </footer>
-</body>
+  </body>
 </html>
