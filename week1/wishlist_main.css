@@ -107,3 +107,38 @@ ul.slide-list {
     transform: scale(1);
   }
 }
+
+@media (max-width: 1106px) {
+  .media_box {
+    width: 20%;
+  }
+}
+
+@media (max-width: 900px) {
+  .media_box {
+    width: 25%;
+  }
+}
+
+@media (max-width: 700px) {
+  .media_box {
+    width: 33.33%;
+  }
+}
+
+@media (max-width: 500px) {
+  .media_box {
+    width: 50%;
+  }
+}
+
+@media (max-width: 350px) {
+  .media_box {
+    width: 100%;
+  }
+}
+
+.media_box {
+  box-sizing: border-box;
+  flex-wrap: wrap;
+}
