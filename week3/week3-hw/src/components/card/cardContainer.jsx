@@ -1,7 +1,7 @@
 import cover from "../../assets/cover.png";
 import { BackImg, FrontImg, CardSection, CardWrapper } from "./card-style";
 
-const CardContainer = ({ cards, shuffleCards, flipCard }) => {
+const CardContainer = ({ cards, flipCard }) => {
   const handleClick = (index) => {
     flipCard(index);
   };

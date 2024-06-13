@@ -7,18 +7,22 @@ import ButtonSection from "./components/button/button-style";
 import Button from "./components/button/button"; // eslint-disable-line no-unused-vars
 import CardContainer from "./components/card/cardContainer";
 import useCards from "./components/card/useCards";
+import Modal from "./components/modal/modal";
+import { useRef } from "react";
 
 const GlobalStyle = createGlobalStyle`
   ${theme.fontFaces}
 `;
 
 function App() {
-  const { cards, shuffleCards, flipCard } = useCards();
+  const ref = useRef();
+
+  const { cards, shuffleCards, flipCard, score } = useCards({ ref });
   return (
     <>
       <GlobalStyle />
       <HeaderSection>
-        <Header shuffleCards={shuffleCards} />
+        <Header shuffleCards={shuffleCards} score={score} />
       </HeaderSection>
       <ButtonSection>
         <Button />
@@ -28,6 +32,7 @@ function App() {
         shuffleCards={shuffleCards}
         flipCard={flipCard}
       />
+      <Modal modalRef={ref} shuffleCards={shuffleCards} />
     </>
   );
 }
