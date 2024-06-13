@@ -74,12 +74,19 @@
   width: 8rem;
 }
 
-@keyframes roll {
-  0% {
+ul.slide-list {
+  display: flex;
+  padding: 0;
+  gap: 1rem;
+  animation: scrollBanner 15s linear infinite;
+}
+
+@keyframes scrollBanner {
+  from {
     transform: translateX(0);
   }
-  100% {
-    transform: translateX(calc(-8rem * 24));
+  to {
+    transform: translateX(-100%);
   }
 }
 
