@@ -17,6 +17,9 @@ const useCards = ({ ref }) => {
       .sort(() => Math.random() - 0.5) //음수면 순서 안바뀌고 양수면 순서 바뀜
       .map((card) => ({ ...card, id: Math.random() })); //카드에 랜덤한 아이디 값 줌
     setCards(shuffledCards);
+    setScore(0);
+    setChoiceOne({});
+    setChoiceTwo({});
   };
 
   const flipCard = (index) => {
