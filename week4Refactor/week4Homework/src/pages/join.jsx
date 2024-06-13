@@ -9,7 +9,7 @@ const Join = () => {
   const [password, setPassword] = useState("");
   const [userName, setUserName] = useState("");
   const [userNum, setUserNum] = useState("");
-
+  const [errors, setErrors] = useState({});
   const navigate = useNavigate();
 
   const handleChangePhoneNumber = (e) => {
@@ -18,22 +18,47 @@ const Join = () => {
   };
 
   const submitForm = async () => {
-    try {
-      const postJoinData = await axios.post(
-        `${import.meta.env.VITE_APP_BASE_URL}/member/join`,
-        {
-          authenticationId: userId,
-          password: password,
-          nickname: userName,
-          phone: userNum,
-        }
-      );
-      console.log(postJoinData);
-      alert("회원가입 완룡!");
-      navigate("/LogIn");
-    } catch (error) {
-      alert(error.response?.data.message);
-      console.error("회원가입 실패");
+    const newErrors = {};
+
+    if (userId === "") {
+      newErrors.userId = "id를 입력해주세요";
+    }
+
+    if (password === "") {
+      newErrors.password = "비밀번호를 입력해주세요";
+    }
+
+    if (userName === "") {
+      newErrors.userName = "닉네임을 입력해주세요";
+    }
+
+    if (userNum === "") {
+      newErrors.userNum = "전화번호를 입력해주세요";
+    }
+
+    setErrors(newErrors);
+
+    if (Object.keys(newErrors).length === 0) {
+      try {
+        const postJoinData = await axios.post(
+          `${import.meta.env.VITE_APP_BASE_URL}/member/join`,
+          {
+            authenticationId: userId,
+            password: password,
+            nickname: userName,
+            phone: userNum,
+          }
+        );
+        console.log(postJoinData);
+        alert("회원가입 완룡!");
+        navigate("/LogIn");
+      } catch (error) {
+        alert(error.response?.data.message);
+        console.error("회원가입 실패");
+      }
+    } else {
+      const firstErrorAlert = Object.keys(newErrors)[0];
+      alert(newErrors[firstErrorAlert]);
     }
   };
   return (
@@ -46,6 +71,7 @@ const Join = () => {
             placeholder="ID를 입력해주세요"
             value={userId}
             onChange={(e) => setUserId(e.target.value)}
+            className={`input-field ${errors.userId ? "error" : ""}`}
           />
         </InputSection>
         <InputSection>
@@ -54,6 +80,7 @@ const Join = () => {
             placeholder="비밀번호를 입력해주세요"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
+            className={`input-field ${errors.password ? "error" : ""}`}
           />
         </InputSection>
         <WarningText>
@@ -65,6 +92,7 @@ const Join = () => {
             placeholder="닉네임을 입력해주세요"
             value={userName}
             onChange={(e) => setUserName(e.target.value)}
+            className={`input-field ${errors.userName ? "error" : ""}`}
           />
         </InputSection>
         <InputSection>
@@ -73,6 +101,7 @@ const Join = () => {
             placeholder="전화번호를 입력해주세요"
             value={userNum}
             onChange={handleChangePhoneNumber}
+            className={`input-field ${errors.userNum ? "error" : ""}`}
           />
         </InputSection>
         <WarningText>전화번호 형식은 010-0000-0000입니다.</WarningText>
@@ -138,8 +167,14 @@ const Input = styled.input`
   height: 3rem;
   width: 20rem;
   padding-left: 0.5rem;
-  &.error {
-    border: 1px solid;
+  &:invalid {
+    border-color: gray;
+  }
+
+  &:focus:invalid {
+    outline-color: #000000;
+  }
+  &.input-field.error {
     border-color: red;
   }
 `;
