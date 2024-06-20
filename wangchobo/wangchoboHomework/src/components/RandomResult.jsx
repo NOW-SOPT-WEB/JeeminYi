@@ -10,9 +10,6 @@ const RandomResult = ({ setStep }) => {
 
   const randomFood = getRandomValue(FoodData);
 
-  console.log("FoodData: ", FoodData);
-  console.log("Random Food: ", randomFood);
-
   return (
     <PageWrapper>
       <TitleWrapper>오늘의 점메추는 바로바로</TitleWrapper>
