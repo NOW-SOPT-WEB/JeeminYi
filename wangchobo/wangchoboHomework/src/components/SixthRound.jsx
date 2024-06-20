@@ -6,7 +6,7 @@ const SixthRound = ({ setStep }) => {
       <TitleWrapper>오늘의 점메추는 바로바로</TitleWrapper>
       <RetryBtn
         onClick={() => {
-          setStep("secondOne");
+          setStep("secondRecom");
         }}
       >
         다시하기

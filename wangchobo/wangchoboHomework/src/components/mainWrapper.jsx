@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { FirstRound } from "./firstRound";
+import FirstRound from "./FirstRound";
 import { useState } from "react";
 import SecondRoundRecomm from "./SecondRoundRecomm";
 import SecondRoundRandom from "./SecondRoundRandom";
@@ -9,7 +9,7 @@ import FifthRound from "./FifthRound";
 import SixthRound from "./SixthRound";
 import RandomResult from "./RandomResult";
 
-export const MainWrapper = ({ step, setStep }) => {
+const MainWrapper = ({ step, setStep }) => {
   //음식 데이터 filter 관리
   const [foodArray, setFoodArray] = useState([]);
   //Next 버튼 비활성화 (선택 여부 확인)
@@ -20,8 +20,8 @@ export const MainWrapper = ({ step, setStep }) => {
     <PageWrapper>
       <BoxWrapper>
         {step === "first" && <FirstRound setStep={setStep} />}
-        {step === "secondOne" && <SecondRoundRecomm setStep={setStep} />}
-        {step === "secondTwo" && <SecondRoundRandom setStep={setStep} />}
+        {step === "secondRecom" && <SecondRoundRecomm setStep={setStep} />}
+        {step === "secondRandom" && <SecondRoundRandom setStep={setStep} />}
         {step === "third" && (
           <ThirdRound
             setStep={setStep}
@@ -53,6 +53,8 @@ export const MainWrapper = ({ step, setStep }) => {
     </PageWrapper>
   );
 };
+
+export default MainWrapper;
 
 const PageWrapper = styled.div`
   width: 100%;

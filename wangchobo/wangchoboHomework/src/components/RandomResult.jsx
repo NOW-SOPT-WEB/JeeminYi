@@ -22,7 +22,7 @@ const RandomResult = ({ setStep }) => {
       </ResultWrapper>
       <RetryBtn
         onClick={() => {
-          setStep("secondTwo");
+          setStep("secondRandom");
         }}
       >
         다시하기

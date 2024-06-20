@@ -44,7 +44,7 @@ const ThirdRound = ({ setStep, isClicked, setIsClicked }) => {
       <BtnWrapper>
         <PrevBtn
           onClick={() => {
-            setStep("secondOne");
+            setStep("secondRecom");
           }}
         >
           이전으로

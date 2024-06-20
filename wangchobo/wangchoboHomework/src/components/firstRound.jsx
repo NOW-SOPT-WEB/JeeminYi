@@ -1,13 +1,13 @@
 import styled from "styled-components";
 
-export const FirstRound = ({ setStep }) => {
+const FirstRound = ({ setStep }) => {
   return (
     <PageWrapper>
       <TitleWrapper>원하는 추천 방식을 골라봐~</TitleWrapper>
       <Wrapper>
         <RecommWrapper
           onClick={() => {
-            setStep("secondOne");
+            setStep("secondRecom");
           }}
         >
           취향대로
@@ -16,7 +16,7 @@ export const FirstRound = ({ setStep }) => {
         </RecommWrapper>
         <RecommWrapper
           onClick={() => {
-            setStep("secondTwo");
+            setStep("secondRandom");
           }}
         >
           랜덤
@@ -27,6 +27,9 @@ export const FirstRound = ({ setStep }) => {
     </PageWrapper>
   );
 };
+
+export default FirstRound;
+
 const PageWrapper = styled.div`
   display: flex;
   flex-direction: column;

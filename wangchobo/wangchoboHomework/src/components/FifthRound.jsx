@@ -7,9 +7,9 @@ const FifthRound = ({ setStep, isClicked, setIsClicked }) => {
       <H4>3 / 3</H4>
       <MoodWrapper>
         <Fifthbox
-          className={`nonesoup ${isClicked === "nonesoup" && "clicked"}`}
+          className={`noneSoup ${isClicked === "noneSoup" && "clicked"}`}
           onClick={() => {
-            setIsClicked("nonesoup");
+            setIsClicked("noneSoup");
           }}
         >
           국물 X
@@ -33,12 +33,12 @@ const FifthRound = ({ setStep, isClicked, setIsClicked }) => {
         </PrevBtn>
         <NextBtn
           className={`nextbutton ${
-            (isClicked === "nonesoup" || isClicked === "soup") && "abled"
+            (isClicked === "noneSoup" || isClicked === "soup") && "abled"
           }`}
           onClick={() => {
             setStep("sixth");
           }}
-          disabled={isClicked !== "nonesoup" && isClicked !== "soup"}
+          disabled={isClicked !== "noneSoup" && isClicked !== "soup"}
         >
           결과보기
         </NextBtn>
@@ -56,7 +56,7 @@ const PageWrapper = styled.div`
   margin-top: 2rem;
 `;
 
-const TitleWrapper = styled.span`
+const TitleWrapper = styled.div`
   justify-content: center;
   width: 45rem;
   height: 5rem;
@@ -70,7 +70,7 @@ const TitleWrapper = styled.span`
   border-radius: 1rem;
 `;
 
-const H4 = styled.p`
+const H4 = styled.h4`
   padding-top: 2rem;
   width: 45rem;
   padding-right: 1rem;
