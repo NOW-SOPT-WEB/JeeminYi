@@ -1,0 +1,26 @@
+header {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  background-color: black;
+  width: 100%;
+  height: 4rem;
+  z-index: 2;
+}
+
+.headerTitle {
+  align-self: center;
+  color: white;
+}
+
+.headerButton {
+  width: 5rem;
+  height: 2rem;
+  align-self: center;
+  position: absolute;
+  right: 2rem;
+  border-radius: 0.5rem;
+  border: 1px black;
+  background-color: white;
+  cursor: pointer;
+}
